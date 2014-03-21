@@ -9,7 +9,8 @@ permalink:        pretty
 title:            'PCS'
 tagline:          'JS Immersion'
 description:      'JavaScript Immersion'
-url:              http://hyde.getpoole.com
+url:              http://portlandcodeschool.github.io/jsi
+baseurl:          /project-name
 
 author:
   name:           'Whitney Young'

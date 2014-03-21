@@ -7,7 +7,7 @@ title: Classes
   {% for post in site.posts %}
     <div>
       <strong class="post-title">
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </strong>
       {% if post.slides %}<span class="post-slides"><a class="slides" href="{{ post.slides }}">Slides</a></span>{% endif %}
       <span class="post-date">{{ post.date | date_to_string }}</span>
