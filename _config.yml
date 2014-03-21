@@ -1,0 +1,19 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            'PCS'
+tagline:          'JS Immersion'
+description:      'JavaScript Immersion'
+url:              http://hyde.getpoole.com
+
+author:
+  name:           'Whitney Young'
+  url:            https://twitter.com/wbyoung
+
+# Custom vars
+version:          1.0.0

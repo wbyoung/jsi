@@ -1,0 +1,11 @@
+This document contains the list of Third Party Software included with
+this project, along with the license information.
+
+Third Party Software may impose additional restrictions and it is the
+user's responsibility to ensure that they have met the licensing
+requirements of this project and the relevant license of the Third Party
+Software they are using.
+
+Hyde - https://github.com/poole/hyde
+License: MIT
+Reference: https://github.com/poole/hyde/blob/master/LICENSE.md

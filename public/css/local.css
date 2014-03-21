@@ -1,0 +1,13 @@
+.post .slides {
+  margin: -0.5em 0em 1em 0em;
+  display: block;
+}
+
+.posts.classes .slides {
+  text-transform: lowercase;
+  color: #666;
+}
+.posts.classes .post-date {
+  display: inline;
+  font-size: 75%;
+}
