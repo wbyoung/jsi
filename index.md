@@ -11,6 +11,11 @@ resources that we'll use throughout the course.
 Throughout the course, this site will continue to be updated. If you notice
 any problems, please point them out so they can be fixed.
 
+## Classes
+
+{% include classes.html %}
+
+
 ## Have Fun
 
 We want everyone to have fun while they learn at PCS. An open, welcoming
