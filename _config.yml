@@ -10,7 +10,7 @@ title:            'PCS'
 tagline:          'JS Immersion'
 description:      'JavaScript Immersion'
 url:              http://portlandcodeschool.github.io/jsi
-baseurl:          /project-name
+baseurl:          /jsi
 
 author:
   name:           'Whitney Young'
