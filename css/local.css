@@ -11,3 +11,13 @@
   display: inline;
   font-size: 75%;
 }
+
+.reveal pre code {
+  padding: 30px;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: scroll;
+}

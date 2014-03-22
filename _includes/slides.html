@@ -1,11 +1,10 @@
 <div class="posts classes">
   {% for post in site.posts %}
-    {% if post.layout == "post" %}
+    {% if post.layout == "slides" %}
       <div>
         <strong class="post-title">
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </strong>
-        {% include slides_for_post.html post=post %}
         <span class="post-date">{{ post.date | date_to_string }}</span>
       </div>
     {% endif %}

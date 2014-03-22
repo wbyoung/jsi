@@ -1,0 +1,113 @@
+---
+layout: slides
+title: Welcome
+class: welcome
+---
+
+<section>
+	<h1>Welcome</h1>
+	<h3>JavaScript Immersion</h3>
+	<p>
+		<small>Whitney Young</small>
+	</p>
+</section>
+
+<section>
+	<h2>Jump Right In</h2>
+	<p>
+		Let's start installing stuff.
+	</p>
+	<p>
+		<small>Some things take a while&hellip;</small>
+	</p>
+
+	<aside class="notes">
+		<ul>
+			<li>Class website has installation instructions</li>
+			<li>We'll do introductions in a minute.</li>
+		</ul>
+	</aside>
+</section>
+
+<section>
+	<h2>Introductions</h2>
+	<ul>
+		<li>Name &amp; background</li>
+		<li>One weakness</li>
+		<li>What you want to build</li>
+	</ul>
+</section>
+
+<section>
+	<section>
+		<h2>Command Line</h2>
+		<p>Let's look at basic commands</p>
+		<aside class="notes">
+			The command line can be intimidating, that's okay.
+		</aside>
+	</section>
+	<section>
+		<p><code>pwd</code></p>
+		<p><small>Print the current working directory</small></p>
+	</section>
+	<section>
+		<p><code>ls [path]</code></p>
+		<p><small>List the contents of a directory (or the current directory)</small></p>
+	</section>
+	<section>
+		<p><code>cd &lt;path&gt;</code></p>
+		<p><small>Change the current working directory</small></p>
+	</section>
+	<section>
+		<p><code>cd ~</code></p>
+		<p><small>Go to your home directory</small></p>
+	</section>
+	<section>
+		<p><code>cd ..</code></p>
+		<p><small>The <code>..</code> indicates the parent directory</small></p>
+	</section>
+	<section>
+		<p>
+			<code>cp &lt;src&gt; &lt;dest&gt;</code><br>
+			<code>mv &lt;src&gt; &lt;dest&gt;</code><br>
+			<code>rm &lt;path&gt;</code>
+		</p>
+		<p><small>Copy, move, and remove files</small></p>
+	</section>
+	<section>
+		<p><code>man &lt;command&gt;</code></p>
+		<p><small>Get &ldquo;help&rdquo;</small></p>
+		<aside class="notes">
+			Man pages are often very difficult to understand.
+		</aside>
+	</section>
+	<section>
+		<h3>How do I &hellip;?</h3>
+		<p>Ask.</p>
+		<p><small>You can do just about anything on the command line.</small></p>
+		<aside class="notes">
+			Learning how to use the command line will make you more productive.
+		</aside>
+	</section>
+</section>
+
+<section>
+	<h2>Pretty Code</h2>
+	<pre><code data-trim contenteditable>
+function linkify( selector ) {
+if( supports3DTransforms ) {
+
+var nodes = document.querySelectorAll( selector );
+
+for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+var node = nodes[i];
+
+if( !node.className ) {
+node.className += ' roll';
+}
+}
+}
+}
+	</code></pre>
+	<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+</section>

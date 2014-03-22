@@ -15,6 +15,9 @@ any problems, please point them out so they can be fixed.
 
 {% include classes.html %}
 
+## Slides
+
+{% include slides.html %}
 
 ## Have Fun
 
