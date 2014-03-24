@@ -1,5 +1,5 @@
-{% for slides in site.posts %}
+{% for slides in site.posts reversed %}
   {% if slides.layout == "slides" and slides.class == include.post.class %}
-    <span class="post-slides"><a class="slides" href="{{ site.baseurl }}{{ slides.url }}">Slides</a></span>
+    <span class="post-slides"><a class="slides" href="{{ site.baseurl }}{{ slides.url }}">{% if include.post.title == slides.title %}Slides{% else %}{{ slides.title }}{% endif %}</a></span>
   {% endif %}
 {% endfor %}
