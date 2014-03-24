@@ -6,6 +6,32 @@ title: Reference
 You may find some of these resources to be useful companion materials while
 learning JavaScript.
 
+## Sites
+
+* [nodeschool.io][nodeschool]  
+  Great lessons to learn Node.js.
+
+
+## Articles
+
+* [How browsers work][browsers]
+* [Impostor Syndrome][impostor]
+
+## Online Books
+
+* [Git Book][gitbook]  
+  More than you ever wanted to know about Git.
+
+* [JSbooks][jsbooks]  
+  Free JavaScript books.
+
+* [JavaScript Allongé][allonge]  
+  This book begins with a different approach to teaching common concepts.
+  Overall, it is very focused on functional JavaScript. It does have an
+  academic feel at times, but is also very focused on practical usage of the
+  language. Depending on your learning style, it could be helpful or you may
+  find it to be confusing.
+
 ## Books
 
 I learn best by doing rather than reading, so please note that I have only
@@ -56,6 +82,11 @@ expectations.
   This book will probably teach you some good practices to keep you from forming
   bad habits.
 
+* _Effective JavaScript_, David Herman  
+  Intermediate, $20  
+  This is a good book to teach you some finer points of JavaScript, how things
+  work, which language features to use, and which to avoid.
+
 * _Secrets of the JavaScript Ninja_, John Resig and Bear Bibeault  
   Advanced, $40  
   This is a good advanced book that will teach you about many real world
@@ -70,5 +101,14 @@ expectations.
   to spin at times and sometimes has confusing explanations of concepts
   because it dives into each idea quickly. This book gives academic details
   on concepts like scope and closures.
+
+[jsbooks]: http://jsbooks.revolunet.com
+[nodeschool]: http://nodeschool.io/
+
+[browsers]: http://docs.webplatform.org/wiki/concepts/internet_and_web/how_browsers_work
+[impostor]: https://medium.com/tech-talk/bdae04e46ec5
+
+[gitbook]: http://www.git-scm.com/book
+[allonge]: https://leanpub.com/javascript-allonge/read
 
 [powells]: https://www.google.com/maps/place/Powell's+Books:+Bldg+2/@45.5238358,-122.6824438,18z
