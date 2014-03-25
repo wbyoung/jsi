@@ -21,3 +21,26 @@ pre {
   word-wrap: normal;
   overflow-x: scroll;
 }
+
+h2 {
+  margin-top: 2em;
+  border-bottom: 1px solid #ddd;
+}
+
+aside {
+  font-size: 70%;
+  padding: 1em 2em;
+  background-color: #fbfff2;
+  color: #80837a;
+}
+
+aside strong:first-child {
+  display: block;
+  color: #80837a;
+  margin: 1em 0em;
+}
+
+q {
+  font-style: italic;
+  
+}

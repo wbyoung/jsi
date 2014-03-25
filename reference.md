@@ -17,6 +17,16 @@ learning JavaScript.
 * [How browsers work][browsers]
 * [Impostor Syndrome][impostor]
 
+
+## Documentation
+
+[Javascript Arithmetic Operators][js-arithmetic]  
+[Javascript Assignment Operators][js-assignment]  
+[Javascript Comparison Operators][js-comparison]  
+[Javascript Logic Operators][js-logic]  
+[Javascript String Operators][js-strings]  
+
+
 ## Online Books
 
 * [Git Book][gitbook]  
@@ -112,3 +122,9 @@ expectations.
 [allonge]: https://leanpub.com/javascript-allonge/read
 
 [powells]: https://www.google.com/maps/place/Powell's+Books:+Bldg+2/@45.5238358,-122.6824438,18z
+
+[js-arithmetic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+[js-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators
+[js-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
+[js-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+[js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
