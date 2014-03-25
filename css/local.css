@@ -16,6 +16,11 @@
   padding: 30px;
 }
 
+.reveal h1 {
+  word-wrap: normal;
+  -webkit-hyphens: none;
+}
+
 pre {
   white-space: pre;
   word-wrap: normal;
@@ -42,5 +47,15 @@ aside strong:first-child {
 
 q {
   font-style: italic;
-  
+}
+
+.inline-code,
+.inline-code .highlight {
+  display: inline;
+  margin: 0px;
+}
+
+.inline-code .highlight pre {
+  display: inline-block;
+  padding: .25em 0.5em;
 }
