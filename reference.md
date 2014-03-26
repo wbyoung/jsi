@@ -20,11 +20,12 @@ learning JavaScript.
 
 ## Documentation
 
-[Javascript Arithmetic Operators][js-arithmetic]  
-[Javascript Assignment Operators][js-assignment]  
-[Javascript Comparison Operators][js-comparison]  
-[Javascript Logic Operators][js-logic]  
-[Javascript String Operators][js-strings]  
+[JavaScript Arithmetic Operators][js-arithmetic]  
+[JavaScript Assignment Operators][js-assignment]  
+[JavaScript Comparison Operators][js-comparison]  
+[JavaScript Logic Operators][js-logic]  
+[JavaScript String Operators][js-strings]  
+[JavaScript `typeof`][js-typeof]  
 
 
 ## Online Books
@@ -128,3 +129,4 @@ expectations.
 [js-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
 [js-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 [js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
+[js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof

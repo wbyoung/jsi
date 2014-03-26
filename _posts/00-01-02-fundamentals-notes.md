@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: JavasScript Fundamentals Notes
+title: Fundamentals Notes
 date: 2014-05-13 00:00:00
 ---
 

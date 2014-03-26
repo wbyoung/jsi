@@ -1,12 +1,13 @@
 ---
 layout: post
-title: JavasScript Fundamentals
-class: js-fundamentals
+title: Fundamentals
+class: fundamentals
 date: 2014-05-13 00:00:00
 ---
 
 This class will cover some of the fundamentals of JavaScript. We will discuss
-conditionals, objects, arrays and functions.
+conditionals, objects, arrays and functions. We'll also make a lot of mistakes
+so we can learn that it's not quite so bad.
 
 Since we're just starting off, let's take baby steps to build up our programming
 chops. First, we'll learn to speak. Then we'll learn to count.
@@ -88,6 +89,26 @@ greet(person);
 greet({ name: "Sara" });
 {% endhighlight %}
 
+
+### Return values
+
+Functions can also produce a result. We'll only touch on this briefly today, but
+it will be an important concept that we start using very soon.
+
+{% highlight javascript %}
+var person = {
+  firstName: "Whitney",
+  lastName: "Young"
+};
+
+var fullName = function(person) {
+  return person.fristName + " " + person.lastName;
+};
+
+console.log(fullName(person));
+{% endhighlight %}
+
+
 <aside>
 **Confused by parenthesis?**
 
@@ -100,8 +121,8 @@ If you're still having trouble, and you're not in the mood to just accept it, th
 may help: the parenthesis don't mean just one thing. When parenthesis come after the
 keyword `function`, they are being used to define arguments. When they come after a
 variable name, they mean call the function. So `function(a, b, c)` means define the
-arguments `a`, `b`, and `c` for a new function. But `learnJavascript(x, y, z)` means
-that you want to call the function that's been assigned to `learnJavascript` with
+arguments `a`, `b`, and `c` for a new function. But `learnJavaScript(x, y, z)` means
+that you want to call the function that's been assigned to `learnJavaScript` with
 whatever values are in `x`, `y`, and `z`.
 </aside>
 
@@ -115,8 +136,10 @@ whatever values are in `x`, `y`, and `z`.
 - Write a function that takes two people objects and logs a message about them meeting
   each other for the first time. For instance, `introduce(john, sara)` would log something
   like `John met Sara and said the color is green is awesome`.
-- Bonus: Change `difference` so that it never shows negative numbers. For instance,
-  `difference(5, 7)` should log `The difference between 5 and 7 is 2`.
+- Create variations of your sum and difference functions that return a results instead of
+  logging
+- Bonus: Change `difference` so that it never returns negative numbers. For instance,
+  both `difference(5, 7)` and `difference(7, 5)` should return `2`.
 
 
 

@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Test Driven Development & Git Workflow
-class: abstractions+tdd+git
+title: Abstractions, Git, & TDD
+class: abstractions+git+tdd
 date: 2014-05-14 00:00:00
 ---
+
+This lesson will cover a few more basics, and we'll start using 
 
 # In Progress
 
