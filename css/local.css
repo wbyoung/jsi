@@ -32,6 +32,12 @@ h2 {
   border-bottom: 1px solid #ddd;
 }
 
+hr {
+  margin: 0.4em 0em;
+  border: none;
+  border-bottom: 1px dashed #eee;
+}
+
 aside {
   font-size: 70%;
   padding: 1em 2em;
