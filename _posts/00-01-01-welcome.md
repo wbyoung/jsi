@@ -47,6 +47,23 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew install git node
 {% endhighlight %}
 
+### Configure Git
+
+{% highlight bash %}
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st 'status -s'
+git config --global core.editor "subl -w"
+git config --global core.excludesfile '~/.gitignore_global'
+git config --global push.default simple
+git config --global diff.renames true
+git config --global color.ui true
+echo ".DS_Store" >> ~/.gitignore_global
+{% endhighlight %}
+
+
 ### Improve your Terminal
 
 {% highlight bash %}
