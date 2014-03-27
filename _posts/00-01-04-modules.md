@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Functions
-class: functions
+title: Modules
+class: modules
 date: 2014-05-15 00:00:00
 ---
 

@@ -1,6 +1,11 @@
 <div class="posts classes">
   {% for post in site.posts reversed %}
     {% if post.layout == "post" %}
+      {% assign post_week = post.date | date:"%U" %}
+      {% if post_week != week %}
+        {% if week %}<hr>{% endif %}
+        {% assign week = post_week %}
+      {% endif %}
       <div>
         <strong class="post-title">
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
