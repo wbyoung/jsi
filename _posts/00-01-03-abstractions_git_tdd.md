@@ -8,8 +8,6 @@ date: 2014-05-14 00:00:00
 This lesson will cover a few more basics, but first we're going to add Git and
 Test Driven Development to our workflow.
 
-[JavaScript `typeof`][js-typeof]  
-
 ## Git & GitHub
 
 Here's a typical workflow with GitHub:
@@ -69,6 +67,29 @@ git push origin branch-name
 [This answer on StackOverflow][so-git-merge] may also provide some guidance
 if you get stuck merging.
 
+<aside>
+**Whitespace**
+
+Whitespace, that is line breaks, spaces, and tabs, can cause headaches when
+merging changes. You should make sure that when you commit changes that you
+(or your text editor) hasn't changed whitespace in parts of the code that you
+didn't intend to edit.
+
+Also, it's a good idea to ensure that every file ends with a line break
+(newline). Why? Many (command line) tools don't work quite as nicely when you
+don't have that final newline. Git, for instance, will show you a weird
+representation of changes that affect the addition/removal of content at the
+end of a file if you don't have a trailing newline.
+</aside>
+
+
+
+## Test Driven Development
+
+
+
+
+
 ## More Fun With Functions
 
 {% highlight javascript %}
@@ -103,6 +124,5 @@ each(fruits, indicateFruitThatNeedsPurchasing);
 each(fruits, indicateFruitPurchased);
 {% endhighlight %}
 
-[js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 [so-git-merge]: http://stackoverflow.com/a/3407920/98069
 [github-jsi-members]: https://github.com/portlandcodeschool/jsi-members

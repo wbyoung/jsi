@@ -28,6 +28,12 @@ learning JavaScript.
 [JavaScript `typeof`][js-typeof]  
 
 
+## Tools
+
+[Node.js][node]  
+[JSHint][jshint]  
+
+
 ## Online Books
 
 * [Git Book][gitbook]  
@@ -130,3 +136,6 @@ expectations.
 [js-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 [js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
 [js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
+[node]: (http://nodejs.org)
+[jshint]: (http://www.jshint.com)
