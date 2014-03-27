@@ -16,6 +16,9 @@ date: 2014-05-12 00:00:00
   notebook around with them could be a good idea.
 - Everyone should try to come up with at least one question from the previous
   day's class to start off the following day.
+- Discuss constructive criticism & non-constructive criticism. Throughout the
+  class you'll probably be critical as an instructor, but this is to help them
+  grow.
 - No programmer knows everything. A sign of strength and a great way to learn
   is to admit that you don't know what someone else is talking about.
 - Solutions to many exercises will be available either directly on this site or
