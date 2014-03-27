@@ -4,9 +4,49 @@ title: Fundamentals Notes
 date: 2014-05-13 00:00:00
 ---
 
+## Class Flow
+
+- There's no expectation to get through all the material on this one day, it
+  could bleed over into later in the week.
+- Break the slides into two sections and allow the students to try out objects
+  before moving on to functions. Be sure they understand pretty well before
+  moving on. This stuff should be pretty straight forward.
+- Discuss JSHint briefly before functions, have them lint a file. Show some
+  examples like `==`, whitespace problems, and mistyped variable names.
+- Once getting into the functions section, take things very slowly.
+- Introduce the _Learning To Count_ example very slowly in particular.
+- The `continueCounting` function progress is described in detail below.
+- The array section is basically a copy of the ideas presented in counting
+- The instructor should note that we're building up to a recursive
+  implementation of `forEach` in the next class, but don't mention that these
+  are recursive functions at this point. There's no reason to introduce that
+  jargon right now.
+
 ## Counting
 
-Here's a final version of the counting code:
+### The `continueCounting` function progression
+
+Discuss the comment on the class page, try to get the students to understand
+that they'll need to both say the number and continue counting afterwards.
+This code turns out to be:
+
+{% highlight javascript %}
+var continueCounting = function(n) {
+  sayNumber(n);
+  continueCounting(n+1);
+};
+{% endhighlight %}
+
+Gage how hard this is for students to understand. Regardless of whether they
+fully understand, it's a very good idea to walk through what will happen as
+this function progresses. Do not discuss call stacks. Simply ask them what's
+going to happen next.
+
+There's a note on the class page that refers to proper tail calls in ES6. If
+anyone asks about this, simply point out that the comment tells them to ask
+later and leave it at that. Absolutely do not mention tail calls at this point.
+
+#### Final Counting Code
 
 {% highlight javascript %}
 var sayNumber = function(person, n) {

@@ -32,6 +32,19 @@ console.log(person.name);
 We'll be exploring objects in a lot more detail in the future, but for now we'll
 start using them to get comfortable with the syntax.
 
+## Code Quality
+
+Are you typing everything right? Are you sure you didn't make any typos?
+
+Most JavaScript programmers aren't really sure that they got it all right, so
+we use programs to verify that everything looks okay. Try it out. Don't be
+surprised if you have a few mistakes already. :)
+
+{% highlight bash %}
+npm install -g jshint
+jshint myfile.js
+{% endhighlight %}
+
 
 ## Learning to Speak
 
