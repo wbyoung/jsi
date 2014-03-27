@@ -72,3 +72,25 @@ q {
   display: inline-block;
   padding: .25em 0.5em;
 }
+
+.section-reference {
+  position: absolute;
+  display: none;
+}
+
+.section-reference i {
+  font-size: 15px;
+  vertical-align: middle;
+  margin-left: -34px;
+  margin-bottom: 4px;
+  padding: 4px 12px;
+  color: #000;
+}
+
+.content h2:hover .section-reference,
+.content h3:hover .section-reference,
+.content h4:hover .section-reference,
+.content h5:hover .section-reference,
+.content h6:hover .section-reference {
+  display: block;
+}
