@@ -23,3 +23,6 @@ date: 2014-05-12 00:00:00
   and tools for learning and not abuse them. Students should respect others'
   learning styles and not offer up solutions when they simply read it.
 - Discuss impostor syndrome.
+  If you don't feel that you've ever been affected by impostor syndrome
+  yourself, at least share with students the fact that after X years of
+  learning to program, you're still learning. Have empathy.
