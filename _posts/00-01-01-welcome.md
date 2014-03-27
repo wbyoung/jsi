@@ -111,6 +111,7 @@ To come&hellip;
 [Comparison][js-comparison]  
 [Logic][js-logic]  
 [Strings][js-strings]  
+[Impostor Syndrome][impostor]  
 
 
 ## For later
@@ -123,3 +124,4 @@ To come&hellip;
 [js-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
 [js-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 [js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
+[impostor]: https://medium.com/tech-talk/bdae04e46ec5
