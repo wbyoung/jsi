@@ -4,10 +4,11 @@ JavaScript Immersion site content.
 
 [portlandcodeschool.github.io/jsi](http://portlandcodeschool.github.io/jsi)
 
-### License
+### Copyright
 
-This website is _not_ distributed under an open source license.  
-Please respect copyright laws.
+The content of this site is protected by copyright. It is _not_ distributed
+under an open source license. It cannot be used without express written consent
+from the author.
 
-Copyright (c) 2014 Whitney Young.  
+Copyright &copy; 2014 Whitney Young.  
 All rights reserved.
