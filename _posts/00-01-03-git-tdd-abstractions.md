@@ -145,6 +145,9 @@ piece of code that can be shared is called _abstraction_.
 
 ## Challenges
 
+- Write a function that takes an array of people as an argument an updates each
+  of their ages to be one year older. Make sure you write tests before you
+  write the function so you're properly doing TDD.
 - Write test for the `each` function.
 - Create a new version of the interest rate calculator that calculates the
   amount of interest you've paid with fluctuating interest rates. For example,
