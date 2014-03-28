@@ -5,8 +5,9 @@ class: git+tdd+abstractions
 date: 2014-05-14 00:00:00
 ---
 
-This lesson will cover a few more basics, but first we're going to add Git and
-Test Driven Development to our workflow.
+This lesson will expand on some of the ideas we touched on while discussing
+functions, but first we're going to add Git and Test Driven Development to our
+workflow.
 
 ## Git & GitHub
 
@@ -135,37 +136,21 @@ we'll be discussing this shortly when we introduce modules.
 
 ## More Fun With Functions
 
-{% highlight javascript %}
-var continueIterating = function(array, n, fn) {
-  if (n < array.length) {
-    fn(array[n]);
-    continueIterating(array, n+1, fn);
-  }
-};
+Let's continue from where we left of with our fruit functions.
 
-var startIterating = function(array, fn) {
-  continueIterating(array, 0, fn);
-};
-
-startIterating(fruits, indicateFruitThatNeedsPurchasing);
-startIterating(fruits, indicateFruitPurchased);
-{% endhighlight %}
+We were repeating ourselves quite a bit, so let's try to get rid of that
+repetition. Identifying and repeated code, and creating a singular function or
+piece of code that can be shared is called _abstraction_.
 
 
-{% highlight javascript %}
-var each = function(array, fn) {
-  var next = function(array, n, fn) {
-    if (n < array.length) {
-      fn(array[n]);
-      next(array, n+1, fn);
-    }
-  };
-  next(array, 0, fn);
-};
+## Challenges
 
-each(fruits, indicateFruitThatNeedsPurchasing);
-each(fruits, indicateFruitPurchased);
-{% endhighlight %}
+- Write test for the `each` function.
+- Create a new version of the interest rate calculator that calculates the
+  amount of interest you've paid with fluctuating interest rates. For example,
+  you may call `calculateInterest(1000, [0.041, 0.042, 0.38, 0.41], 1)` to
+  calculate the interest on $1000 over 1 year with 4 compounding periods. Note
+  that the formula for this is different.
 
 [so-git-merge]: http://stackoverflow.com/a/3407920/98069
 [github-jsi]: https://github.com/portlandcodeschool/jsi

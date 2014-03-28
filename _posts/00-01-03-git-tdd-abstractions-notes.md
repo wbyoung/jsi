@@ -12,6 +12,7 @@ date: 2014-05-14 00:00:00
 - Run through TDD slides.
 - Do the TDD interest rate calculator.
 - Have them do the TDD challenge.
+- Continue with abstractions (_More Fun With Functions_).
 
 
 ## GitHub Example: Course Members
@@ -82,4 +83,47 @@ describe('fallingTime()', function() {
     expect(function() { fallingTime(-4) }).to.throw(/negative distance/);
   });
 });
+{% endhighlight %}
+
+
+## Abstractions
+
+Go back to the fruits code from the previous day. Basically, we just need
+to refactor to take another argument, `fn` that replaces the calls to
+`indicateFruitThatNeedsPurchasing` and/or `indicateFruitPurchased`.
+
+{% highlight javascript %}
+var continueIterating = function(array, n, fn) {
+  if (n < array.length) {
+    fn(array[n]);
+    continueIterating(array, n+1, fn);
+  }
+};
+
+var startIterating = function(array, fn) {
+  continueIterating(array, 0, fn);
+};
+
+startIterating(fruits, indicateFruitThatNeedsPurchasing);
+startIterating(fruits, indicateFruitPurchased);
+{% endhighlight %}
+
+
+After that, all that needs to be done is some renaming and moving functions
+around. The function `startIterating` becomes `each` and the function
+`continueIterating` becomes `next` and gets moved into the `each` function.
+
+{% highlight javascript %}
+var each = function(array, fn) {
+  var next = function(array, n, fn) {
+    if (n < array.length) {
+      fn(array[n]);
+      next(array, n+1, fn);
+    }
+  };
+  next(array, 0, fn);
+};
+
+each(fruits, indicateFruitThatNeedsPurchasing);
+each(fruits, indicateFruitPurchased);
 {% endhighlight %}
