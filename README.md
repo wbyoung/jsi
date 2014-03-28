@@ -6,8 +6,8 @@ JavaScript Immersion site content.
 
 ### License
 
-This website is not distributed under an open source license. Please respect
-copyright laws.
+This website is _not_ distributed under an open source license.  
+Please respect copyright laws.
 
-Copyright (c) 2014 Whitney Young.
+Copyright (c) 2014 Whitney Young.  
 All rights reserved.
