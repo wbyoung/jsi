@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: Abstractions, Git & TDD Notes
+title: Git, TDD & Abstractions Notes
 date: 2014-05-14 00:00:00
 ---
 

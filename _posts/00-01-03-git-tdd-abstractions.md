@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Abstractions, Git & TDD
-class: abstractions+git+tdd
+title: Git, TDD & Abstractions
+class: git+tdd+abstractions
 date: 2014-05-14 00:00:00
 ---
 
