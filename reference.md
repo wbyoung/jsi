@@ -31,7 +31,10 @@ learning JavaScript.
 ## Tools
 
 [Node.js][node]  
+[npm][npm]
 [JSHint][jshint]  
+[Mocha][mocha]  
+[Chai][chai]  
 
 
 ## Online Books
@@ -137,5 +140,8 @@ expectations.
 [js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
 [js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
-[node]: (http://nodejs.org)
-[jshint]: (http://www.jshint.com)
+[node]: http://nodejs.org
+[npm]: https://www.npmjs.org
+[jshint]: http://www.jshint.com
+[mocha]: http://visionmedia.github.io/mocha/
+[chai]: http://chaijs.com
