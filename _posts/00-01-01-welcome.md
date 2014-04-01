@@ -100,9 +100,31 @@ Someone, please interrupt and ask the following question:
   </ul>
 </aside>
 
+
 ## Project
 
-To come&hellip;
+This project will start to get you familiar with the syntax of the language and
+working in the Terminal. Work with a partner. Both of you should write your own
+version, but neither should work ahead of the other. If you don't understand
+something, speak up! Ideally, every group will have at least one question.
+
+- Create variables with the following names and set their values with the
+  corresponding values for yourself (feel free to get creative and add some
+  more):
+  - `name`
+  - `age`
+  - `birthday`
+  - `hometown`
+  - `hobby`
+- Use `console.log` to show this information about yourself. For example, it
+  may start out with `My name is Whitney and I was born in Baltimore, MD`.
+- Make sure you use every variable that you defined.
+- Tell us a little more about your past. Change the values of `age` and other
+  variables, then `console.log` a little more. For example,
+  `When I was 13 my hobby was lacrosse.`
+- Change your code to only use one `console.log` statement. This will probably
+  raise a question or two!
+
 
 ## Reference
 

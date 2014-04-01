@@ -9,6 +9,19 @@ date: 2014-05-12 00:00:00
 - Class starts with slides. It'd be good to break out of the slides pretty
   often to give examples of things on the slides. Also, the students should
   follow along while going through the slides.
+- Note that students should avoid working ahead. The course contents is
+  designed for presentation by an instructor and has a lot of places where it
+  would be easy to get lost. If extra projects are desired, ask, and we'll
+  happily provide some more stuff to work on.
+- During the project, point out that some people may be coming in with slightly
+  different backgrounds. For those who have programmed before, this may feel
+  easy. For those who haven't, it may feel difficult. Everyone should be
+  understanding of the varying levels of ability at this point, and no one
+  should feel that they missed anything prior to the start of class just
+  because someone else happens to be ahead.
+- If not everyone finishes the project in a decent amount of time, stop
+  everyone and work on it together. Try to get the group that's the furthest
+  behind to answer questions about what we should write next.
 
 ### Notes on Learning
 
@@ -33,3 +46,9 @@ date: 2014-05-12 00:00:00
   students to also grow through exploration as they will be required to do on
   the job. Re-assure the students that even when that happens, we're here to
   guide and answer questions.
+
+## Project
+
+- Expected questions for the project include how to keep line breaks when using
+  one `console.log` statement. There's a good chance that they won't know the
+  term line break.
