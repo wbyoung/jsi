@@ -24,7 +24,7 @@ date: 2014-05-13 00:00:00
 
 ## Counting
 
-### The `continueCounting` function progression
+### The `continueCounting` Function Progression
 
 Discuss the comment on the class page, try to get the students to understand
 that they'll need to both say the number and continue counting afterwards.
