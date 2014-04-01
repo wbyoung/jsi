@@ -29,3 +29,7 @@ date: 2014-05-12 00:00:00
   If you don't feel that you've ever been affected by impostor syndrome
   yourself, at least share with students the fact that after X years of
   learning to program, you're still learning. Have empathy.
+- This curriculum sometimes intentionally takes big steps. The idea is to allow
+  students to also grow through exploration as they will be required to do on
+  the job. Re-assure the students that even when that happens, we're here to
+  guide and answer questions.
