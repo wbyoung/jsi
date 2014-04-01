@@ -88,6 +88,23 @@ end of a file if you don't have a trailing newline.
 Now that you know the typical Git workflow, you can actually make changes to
 [this course][github-jsi] if you find any mistakes.
 
+### Always Use Version Control
+
+Yes, this gets its own section. You know the basics of how to use `git`. You'll
+keep getting better as you use it, and it won't slow you down. What will slow
+you down is when you lose work you've done or get your code into a weird state.
+
+Along the same lines, you should commit code frequently. How frequently? It's
+difficult to commit too frequently, but easy to not commit frequently enough.
+One line commits are okay. You'll find them all over GitHub. Your commit should
+probably change something. Once a day is too infrequently.
+
+Generally, you'll want to commit _working code_, but there are times when it
+may make sense to commit things that don't run. If, for instance, you want to
+share progress with someone else, you may want to commit something that's
+broken. It's generally a good idea to do this on a branch and share that branch
+with someone else.
+
 
 ## Test Driven Development
 
