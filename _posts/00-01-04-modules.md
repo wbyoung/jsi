@@ -333,6 +333,27 @@ And guess what? There [is one][commander]!
 
 Now let's use it.
 
+<aside>
+**Popularity**
+
+Note that popularity is a pretty good indicator of whether or not you may want
+to consider using a module. You should also check to see how many open &amp;
+close issues a project has as well as how long it's been since the project has
+been worked on.
+
+**Licenses**
+
+Most projects on npm are hosted on GitHub and are licensed under the MIT open
+source license. This may not always be the case. Be respectful of the license
+under which a project is released. Generally, you'll be safe to use projects
+off of npm without worrying about the license (the author published to npm
+after all). If you're looking at a project for ideas in your own project,
+though, you should look at the license before you take any ideas or code from
+it. If copying code, you almost always have to credit the author regardless of
+license.
+</aside>
+
+
 ### Setting Up a Project
 
 {% highlight bash %}
@@ -365,7 +386,7 @@ that we wrote.
 <aside>
 **Red Flag: Code Duplication**
 
-We've duplicated the version number now in both the NPM information as well as
+We've duplicated the version number now in both the npm information as well as
 in the `weather.js` file. Duplication leads to problems down the line as
 you'll likely forget to make changes to every place that uses that duplicate
 piece of information. We'll later learn how we can avoid this duplication.
