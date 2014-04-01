@@ -10,7 +10,7 @@ date: 2014-05-12 00:00:00
   often to give examples of things on the slides. Also, the students should
   follow along while going through the slides.
 
-### Notes on learning
+### Notes on Learning
 
 - Students should write down questions as they come up. Carrying a small
   notebook around with them could be a good idea.
