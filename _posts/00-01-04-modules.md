@@ -190,6 +190,208 @@ times(5, function(n) {
 });
   {% endhighlight %}
 
+
+## Command line apps
+
+We've been using command line apps since day one. Now we're going to make one
+of our own.
+
+First, let's take a look at how these apps commonly work. Run
+
+{% highlight bash %}
+npm install -g mocha
+mocha -h
+{% endhighlight %}
+
+We just used two command line apps, `npm` and `mocha`. Seeing the help for
+Mocha should give you a pretty good idea of how command line apps typically
+work. Usually they take arguments and use those arguments to figure out what
+to do.
+
+So what if we wanted to make a weather app?
+
+    Usage: weather [options] [location]
+
+    Options:
+
+      -h, --help                      output usage information
+      -V, --version                   output the version number
+      -c, --celsius       show temperature in celsius
+      -f, --ferinheight   show temperature in ferinheight
+
+So our app needs to be able to handle getting help, the version, Celsius, and
+Ferinheight. It also needs to allow a location to be specified. Let's get to
+work.
+
+{% highlight javascript %}
+// weather.js, run with node weather.js
+
+console.log(process.argv);
+{% endhighlight %}
+
+We're on the right track, but when we run `mocha`, we don't have to run `node`,
+we simply run `mocha`. Let's get that working:
+
+{% highlight bash %}
+mv weather.js weather
+chmod +x weather
+{% endhighlight %}
+
+
+{% highlight bash %}
+#!/usr/bin/env node
+
+console.log(process.argv);
+{% endhighlight %}
+
+{% highlight bash %}
+./weather
+{% endhighlight %}
+
+So what's all that? We made an _executable_ file without a JavaScript
+extension. We added a [_shebang_][shebang] at the top of the file. The shebang
+indicates to the system that how to run the program. We're telling it to use
+`node`. Finally, we can now run our app via `./weather`. We can't simply run
+`weather` because the computer doesn't usually search the current working
+directory for programs to execute, so we instruct it to run by specifying
+a relative path.
+
+<aside>
+**Shebang**
+
+The shebang is actually ignored by the Node interpreter when it's run. So you
+can also run `node weather` and it will work. The `#!` is the actual shebang.
+The remaining part is the program to run instead of executing the file
+directly. In this case, we're using the `env` command to look up the `node`
+that the user prefers. To really understand how this all works, you could
+consider doing the advanced project below, reimplementing `which`.
+</aside>
+
+Here's how we could handle arguments:
+
+{% highlight javascript %}
+var celsius = false;
+var ferinheight = false;
+var location = null;
+
+each(process.argv.slice(2), function(arg) {
+  switch (arg) {
+    case '-h':
+    case '--help':
+      console.log("Here's some help...");
+      process.exit(0);
+      break;
+    case '-V':
+    case '--version':
+      console.log('weather 0.1.0');
+      process.exit(0);
+      break;
+    case '-f':
+    case '--ferinheight':
+      ferinheight = true;
+      break;
+    case '-c':
+    case '--celsius':
+      celsius = true;
+      break;
+    default:
+      location = arg;
+      break;
+  }
+});
+
+if (!celsius && !ferinheight) {
+  ferinheight = true;
+}
+
+if (!location) {
+  location = 'Portland, OR';
+}
+
+console.log('The weather in %s is hopefully sunny.', location);
+if (ferinheight) {
+  console.log('The temperature is 70 Ferinheight.');
+}
+if (celsius) {
+  console.log('The temperature is 21 Celsius.')
+}
+{% endhighlight %}
+
+Well that's a lot of code, it doesn't handle everything perfectly, and I'm
+certain that someone else out there has solved this same problem&hellip;
+
+Is there a module for this?
+
+## NPM
+
+`npm` is Node's package manager. It's a command line tool that will allow us to
+easily install and manage different modules. Its [website][npm] is also
+incredibly useful for searching for modules. Let's look for a _command line_
+module.
+
+And guess what? There [is one][commander]!
+
+Now let's use it.
+
+### Setting Up a Project
+
+{% highlight bash %}
+mkdir my-project
+cd my-project
+git init
+echo "node_modules" > .git_ignore
+npm init
+git add .
+git ci -m 'Setting up project.'
+{% endhighlight %}
+
+#### Installing Modules
+
+{% highlight bash %}
+npm install --save commander
+{% endhighlight %}
+
+You'll note that in your project directory you have a folder called
+`node_modules` as well as a file called `package.json`. `npm` is using these to
+manage the modules you're working with. The `--save` option indicated that you
+wanted to save `commander` as an entry in your `package.json` file. Using the
+`package.json` file, `npm` can easily re-create the list of packages you've
+installed on other machines with a simple `npm install`. This makes
+collaboration (and deployment) much easier.
+
+Now let's update our weather app to use Commander.js instead of the custom code
+that we wrote.
+
+<aside>
+**Red Flag: Code Duplication**
+
+We've duplicated the version number now in both the NPM information as well as
+in the `weather.js` file. Duplication leads to problems down the line as
+you'll likely forget to make changes to every place that uses that duplicate
+piece of information. We'll later learn how we can avoid this duplication.
+</aside>
+
+
+## Projects
+
+These projects are intentionally vague. You'll have to discuss how the user
+will interact with your app and arguments they will pass to your app to make it
+do what they want. Don't forget to continue to use TDD. Also, you should set
+up a repository on GitHub for this small project to allow easy collaboration
+while pair programming.
+
+- Write a calculator
+- Write an app where the user needs to find his/her way through a maze
+- **Advanced:** Write your own version of the `which` command. This challenge
+  will require you to learn a little about how Unix indicates that files are
+  _executable_ as well as _environment variables_ and what the _user's path_
+  means. Read `man which` for details on how this program works, and please
+  indicate that you're trying to tackle this problem so we can chat about a few
+  things first.
+
 [jsdoc]: http://usejsdoc.org
 [js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 [github-jsi-modules]: https://github.com/portlandcodeschool/jsi-modules
+[shebang]: http://en.wikipedia.org/wiki/Shebang_(Unix)
+[npm]: https://www.npmjs.org
+[commander]: https://www.npmjs.org/package/commander

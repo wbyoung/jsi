@@ -36,6 +36,7 @@ learning JavaScript.
 [Mocha][mocha]  
 [Chai][chai]  
 [JSDoc][jsdoc]  
+[Commander.js][commander]  
 
 
 ## Online Books
@@ -147,3 +148,4 @@ expectations.
 [mocha]: http://visionmedia.github.io/mocha/
 [chai]: http://chaijs.com
 [jsdoc]: http://usejsdoc.org
+[commander]: https://www.npmjs.org/package/commander
