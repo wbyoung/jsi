@@ -162,7 +162,7 @@ documentation, it can't hurt to follow a rigid structure like this. It really
 makes you think about how your functions should work. Running this code through
 JSDoc makes it even easier to understand the function:
 
-<iframe src="{{ baseurl }}/jsdoc-example/global.html" width="100%"></iframe>
+<iframe src="{{ site.baseurl }}/jsdoc-example/global.html" width="100%"></iframe>
 
 A list of the types in JavaScript that you can use to document your parameter
 types can be found in the [`typeof` documentation][js-typeof].
