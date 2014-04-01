@@ -18,7 +18,7 @@ for the course.
 
 Today we'll start with slides and then come back to this page.
 
-## Setting up your computer
+## Setting Up Your Computer
 
 It's quite annoying, and you don't have to do it frequently, but learning how
 to install the tools you use will help you significantly going forward.
