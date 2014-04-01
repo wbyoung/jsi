@@ -4,3 +4,110 @@ title: Project Extras
 class: mini-project-extras
 date: 2014-06-05 00:00:00
 ---
+
+## Project Extras
+
+### Markdown
+
+Markdown is a wonderful _markup language_ for writing content for web pages.
+It allows you to easily skip HTML tags in favor of a syntax that's slightly
+more human-readable. Lots of sites use Markdown, and it's valuable to know.
+GitHub, for example, allows Markdown to be used in README files as well as in
+comments.
+
+Here's an example of the syntax:
+
+    # Markdown Overview
+
+    The line with _Markdown Overview_ in it will be an `h1`
+    element. Using multiple `#` signs will make it lower
+    level headings. You can also do things like `code`,
+    **bold**, and _italic_ easily.
+
+    This is a new paragraph because there is a blank line
+    in between it and the previous paragraph.
+    It
+    doesn't matter how short a line is, it will be part of
+    this paragraph.
+
+    It's also easy to point you to
+    [cool websites](http://www.portlandcodeschool.com).
+
+    ## More Syntax
+
+    It's also easy to make lists:
+
+     * List
+     * Of
+     * Unordered
+     * Items
+
+    And numbered lists, too:
+
+     1. Do
+     1. In
+     1. This
+     1. Order
+
+    Finally, you can do large chunks of code:
+
+        var explain = function() {
+          console.log(
+            "This is a code block because " +
+            "it's indented more.");
+        };
+        explain();
+
+
+<aside>
+**Rendered Version**
+
+# Markdown Overview
+
+The line with _Markdown Overview_ in it will be an `h1`
+element. Using multiple `#` signs will make it lower
+level headings. You can also do things like `code`,
+**bold**, and _italic_ easily.
+
+This is a new paragraph because there is a blank line
+in between it and the previous paragraph.
+It
+doesn't matter how short a line is, it will be part of
+this paragraph.
+
+It's also easy to point you to
+[cool websites](http://www.portlandcodeschool.com).
+
+## More Syntax
+
+It's also easy to make lists:
+
+ * List
+ * Of
+ * Unordered
+ * Items
+
+And numbered lists, too:
+
+ 1. Do
+ 1. In
+ 1. This
+ 1. Order
+
+Finally, you can do large chunks of code:
+
+    var explain = function() {
+      console.log(
+        "This is a code block because " +
+        "it's indented more.");
+    };
+    explain();
+</aside>
+
+### Jekyll
+
+Add some of the features that [Jekyll][jekyll] has to your generator. If you
+want to be really ambitious, you can try to make your generator a drop-in
+replacement for Jekyll. But be warned, this could take you months to complete!
+
+[jekyll]: http://jekyllrb.com

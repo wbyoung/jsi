@@ -64,6 +64,14 @@ aside.objective strong:first-child {
   color: inherit;
 }
 
+aside strong,
+aside h1,
+aside h2 {
+  color: inherit;
+  font-size: 100%;
+  font-weight: bold;
+}
+
 q {
   font-style: italic;
 }
