@@ -35,6 +35,7 @@ learning JavaScript.
 [JSHint][jshint]  
 [Mocha][mocha]  
 [Chai][chai]  
+[JSDoc][jsdoc]  
 
 
 ## Online Books
@@ -145,3 +146,4 @@ expectations.
 [jshint]: http://www.jshint.com
 [mocha]: http://visionmedia.github.io/mocha/
 [chai]: http://chaijs.com
+[jsdoc]: http://usejsdoc.org

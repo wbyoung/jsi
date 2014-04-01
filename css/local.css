@@ -100,3 +100,9 @@ q {
 .content h6:hover .section-reference {
   display: block;
 }
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+}
