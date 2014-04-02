@@ -155,6 +155,18 @@ whatever values are in `x`, `y`, and `z`.
   both `difference(5, 7)` and `difference(7, 5)` should return `2`.
 
 
+### Stepping Through Execution
+
+Often it's helpful to walk through pieces of code step by step, the same way
+the computer is working through it. You'll find that you can sometimes better
+understand what's happening this way, and also may discover solutions to
+problems in your code.
+
+There are two nifty utilities that try to make this process more visual:
+
+- [SlowmoJS][slowmojs]
+- [metajs][metajs]
+
 
 ## Learning to Count
 
@@ -377,3 +389,6 @@ We'll do this first part together.
 
 - Create a `startIndicatingFruitPurchased` function.
 - Think about and discuss where things are being repeated in the code
+
+[slowmojs]: http://toolness.github.io/slowmo-js/
+[metajs]: http://int3.github.io/metajs/

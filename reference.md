@@ -11,6 +11,9 @@ learning JavaScript.
 * [nodeschool.io][nodeschool]  
   Great lessons to learn Node.js.
 
+* [SlowmoJS][slowmojs] and [metajs][metajs]  
+  Sites for visualizing code flow.
+
 
 ## Articles
 
@@ -126,6 +129,8 @@ expectations.
 
 [jsbooks]: http://jsbooks.revolunet.com
 [nodeschool]: http://nodeschool.io/
+[slowmojs]: http://toolness.github.io/slowmo-js/
+[metajs]: http://int3.github.io/metajs/
 
 [browsers]: http://docs.webplatform.org/wiki/concepts/internet_and_web/how_browsers_work
 [impostor]: https://medium.com/tech-talk/bdae04e46ec5
