@@ -34,7 +34,7 @@ learning JavaScript.
 ## Tools
 
 [Node.js][node]  
-[npm][npm]
+[npm][npm]  
 [JSHint][jshint]  
 [Mocha][mocha]  
 [Chai][chai]  
