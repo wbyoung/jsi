@@ -40,6 +40,7 @@ learning JavaScript.
 [Chai][chai]  
 [JSDoc][jsdoc]  
 [Commander.js][commander]  
+[Lo-Dash][lodash]  
 
 
 ## Online Books
@@ -154,3 +155,4 @@ expectations.
 [chai]: http://chaijs.com
 [jsdoc]: http://usejsdoc.org
 [commander]: https://www.npmjs.org/package/commander
+[lodash]: http://lodash.com
