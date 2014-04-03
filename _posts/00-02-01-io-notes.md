@@ -242,3 +242,146 @@ var setReminder = function(date, callback) {
 };
 setReminder('3:10pm', function() { console.log('done!'); });
 {% endhighlight %}
+
+## I/O
+
+### Challenge Solution
+
+{% highlight javascript %}
+#!/usr/bin/env node
+
+var fs = require('fs');
+var program = require('commander');
+
+program
+  .version('0.0.1')
+  .usage('[options] <file1> <file2>')
+  .option('-n, --number', 'Report just the number of words')
+  .option('-v, --verbose', 'Be more verbose, report timing information')
+  .parse(process.argv);
+
+
+if (program.args.length != 2) {
+  program.help();
+}
+
+var time = function(name) {
+  var start = Date.now();
+  return function() {
+    if (program.verbose) {
+      console.log('[time] %s: %dms', name, Date.now() - start);
+    }
+  };
+};
+
+var sharedWords = function(contents1, contents2) {
+  var words1 = contents1.split(' ');
+  var words2 = contents2.split(' ');
+
+  var knownWords = {};
+  words1.forEach(function(word) {
+    knownWords[word] = true;
+  });
+
+  var sharedWords = [];
+  words2.forEach(function(word) {
+    if (knownWords[word]) {
+      sharedWords.push(word);
+      delete knownWords[word]; // only report word once
+    }
+  });
+  return sharedWords;
+};
+
+var sharedWordsBigOOfNSquared = function(contents1, contents2) {
+  var words1 = contents1.split(' ');
+  var words2 = contents2.split(' ');
+  var sharedWords = [];
+
+  words1.forEach(function(word1) {
+    var reported = false;
+    sharedWords.every(function(reportedWord) {
+      if (word1 == reportedWord) {
+        reported = true;
+        return false;
+      }
+      return true;
+    });
+    if (!reported) {
+      words2.every(function(word2) {
+        if (word1 == word2) {
+          sharedWords.push(word1);
+          return false;
+        }
+        return true;
+      });
+    }
+  });
+
+  return sharedWords;
+};
+
+var file1 = {
+  path: program.args[0],
+  contents: null
+};
+
+var file2 = {
+  path: program.args[1],
+  contents: null
+};
+
+var doneReading = time('read the files');
+var compareIfBothFilesRead = function() {
+  if (file1.contents && file2.contents) {
+    doneReading();
+
+    var done = time('word comparison');
+    var shared = sharedWords(file1.contents, file2.contents);
+    done();
+
+    if (program.number) { console.log('%d words in common.', shared.length); }
+    else {
+      shared.forEach(function(word) {
+        console.log(word);
+      });
+    }
+  }
+};
+
+fs.readFile(file1.path, { encoding: 'utf8' }, function(err, contents) {
+  file1.contents = contents;
+  compareIfBothFilesRead();
+});
+
+fs.readFile(file2.path, { encoding: 'utf8' }, function(err, contents) {
+  file2.contents = contents;
+  compareIfBothFilesRead();
+});
+{% endhighlight %}
+
+### Challenge Inputs
+
+This code was used to create rather large text files for the compare words
+problem. 10,000 words were created in each of two files.
+
+{% highlight javascript %}
+var fs = require('fs');
+
+var wordCount = parseInt(process.argv[2]);
+
+if (process.argv.length != 3) {
+  console.log('useage: create-words number');
+  process.exit(1);
+}
+
+fs.readFile('/usr/share/dict/words', { encoding: 'utf8' }, function(err, contents) {
+  var lines = contents.split('\n');
+  for (var i = 0; i < wordCount; i++) {
+    var word = lines[Math.floor(Math.random() * lines.length)].trim();
+    process.stdout.write(word);
+    process.stdout.write(' ');
+  }
+  process.stdout.write('\n');
+});
+{% endhighlight %}

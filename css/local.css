@@ -58,6 +58,7 @@ aside.objective {
   border-left: 3px solid #aa759f;
   padding-top: 0em;
   padding-bottom: 0em;
+  max-height: none;
   color: inherit;
 }
 
