@@ -7,8 +7,15 @@ date: 2014-05-19 00:00:00
 ## Class Flow
 
 - Start right into callbacks
-- Implement the functions for baking a cake (see below)
+- Implement the functions for baking a cake while the students help gude the
+  implementations (see below for full solutions).
 - Explain the two bad options for cake baking.
+- Have students do some of the challenges. There are solutions below to each
+  of the challenges.  
+  Present the JavaScript that's wrong below for the `setReminder` challenge.
+  Introduce Lo-Dash through this example, but also ask students to share what's
+  wrong with the code.
+
 
 ## Callbacks
 

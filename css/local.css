@@ -43,6 +43,8 @@ aside {
   padding: 1em 2em;
   background-color: #fbfff2;
   color: #80837a;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 aside strong:first-child {
