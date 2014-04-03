@@ -23,6 +23,28 @@ date: 2014-05-12 00:00:00
   everyone and work on it together. Try to get the group that's the furthest
   behind to answer questions about what we should write next.
 
+### Teamwork
+
+- Students are going to be split into teams of 2 for the first week. They'll
+  be have new partners assigned during weeks 2, 3, and 4.
+- It is therefore in each student's best interest to ensure that everyone in
+  the class move at the same speed. If a group feels that they're ahead of
+  everyone else, they should take some time to help some other groups. They
+  should not give other groups the answer. They should simply help answer
+  questions. If groups don't move at the same speed, the class will become
+  unbalanced. This will happen to some extent, but we'd like to try to avoid
+  it.
+- Students will work in groups of 2-3 for the second month. The groups will be
+  different for the first two and the second two weeks.
+- For the last month, students will submit requests on who to work with for
+  their final projects. Groups will be 2-4 in size. They should include a
+  reason they want to work with each of their top choices (or a project they've
+  already discussed). The instructor should place students into groups ensuring
+  that groups feel balanced. Putting all of the best students together will not
+  result in a realistic environment. But the best student paired with the
+  weakest student would result in frustration for both. Personality and how
+  well the students worked together in the past should be considered.
+
 ### Notes on Learning
 
 - Students should write down questions as they come up. Carrying a small
