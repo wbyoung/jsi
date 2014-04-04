@@ -1,6 +1,7 @@
 ---
 layout: notes
 title: Fundamentals Notes
+class: fundamentals
 date: 2014-05-13 00:00:00
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: notes
 title: Modules Notes
+class: modules
 date: 2014-05-15 00:00:00
 ---
 

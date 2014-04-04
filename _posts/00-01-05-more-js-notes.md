@@ -1,6 +1,7 @@
 ---
 layout: notes
 title: Rounding Out The Basics Notes
+class: more-js
 date: 2014-05-16 00:00:00
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: notes
 title: Git, TDD &amp; Abstractions Notes
+class: git+tdd+abstractions
 date: 2014-05-14 00:00:00
 ---
 
