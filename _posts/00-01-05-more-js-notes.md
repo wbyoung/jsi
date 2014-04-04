@@ -9,6 +9,8 @@ date: 2014-05-16 00:00:00
 
 - Run through slides
 - Discuss loops as you go, allow them to give them a try
+- Mention that what they've been doing is called recursion.
+  Possibly explain what a base case is in recursion.
 
 ## More Problem Ideas
 
