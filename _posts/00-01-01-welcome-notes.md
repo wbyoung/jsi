@@ -70,6 +70,15 @@ date: 2014-05-12 00:00:00
   the job. Re-assure the students that even when that happens, we're here to
   guide and answer questions.
 
+#### Cheating
+
+We're all adults, but a cheating student will hurt everyone in the class. This
+is worth point out to them. Also, all the notes that the instructor uses for
+the classes are available online with full solutions. Eventually they'll know
+enough to find them (if they don't already today). Point this out and request
+that they respect everyone in the class by not reading the instructor notes.
+
+
 ## Project
 
 - Expected questions for the project include how to keep line breaks when using
