@@ -48,6 +48,7 @@ learning JavaScript.
 [`setTimeout` (Node)][node-settimeout]  
 [`readFile`][node-readfile]  
 [`readline`][node-readline]  
+[Debugger][node-debugger]  
 
 
 ## Tools
@@ -175,6 +176,7 @@ expectations.
 [node-readfile]: http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
 [node-settimeout]: http://nodejs.org/api/timers.html#timers_settimeout_callback_delay_arg
 [node-readline]: http://nodejs.org/api/readline.html
+[node-debugger]: http://nodejs.org/api/debugger.html
 
 [node]: http://nodejs.org
 [npm]: https://www.npmjs.org
