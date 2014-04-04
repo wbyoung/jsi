@@ -165,7 +165,7 @@ JSDoc makes it even easier to understand the function:
 <iframe src="{{ site.baseurl }}/jsdoc-example/global.html" width="100%"></iframe>
 
 A list of the types in JavaScript that you can use to document your parameter
-types can be found in the [`typeof` documentation][js-typeof].
+types can be found in the [`typeof` documentation][mdn-typeof].
 
 ## Challenges
 
@@ -411,7 +411,7 @@ while pair programming.
   things first.
 
 [jsdoc]: http://usejsdoc.org
-[js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+[mdn-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 [github-jsi-modules]: https://github.com/portlandcodeschool/jsi-modules
 [shebang]: http://en.wikipedia.org/wiki/Shebang_(Unix)
 [npm]: https://www.npmjs.org

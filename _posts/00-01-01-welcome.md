@@ -128,11 +128,11 @@ something, speak up! Ideally, every group will have at least one question.
 
 ## Reference
 
-[Arithmetic][js-arithmetic]  
-[Assignment][js-assignment]  
-[Comparison][js-comparison]  
-[Logic][js-logic]  
-[Strings][js-strings]  
+[Arithmetic][mdn-arithmetic]  
+[Assignment][mdn-assignment]  
+[Comparison][mdn-comparison]  
+[Logic][mdn-logic]  
+[Strings][mdn-strings]  
 [Impostor Syndrome][impostor]  
 
 
@@ -141,9 +141,9 @@ something, speak up! Ideally, every group will have at least one question.
 - Think of a domain name for a portfolio site
 - Thing of a web application you'd like to build
 
-[js-arithmetic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
-[js-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators
-[js-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
-[js-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
-[js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
+[mdn-arithmetic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+[mdn-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators
+[mdn-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
+[mdn-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+[mdn-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
 [impostor]: https://medium.com/tech-talk/bdae04e46ec5
