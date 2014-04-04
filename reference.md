@@ -8,11 +8,25 @@ learning JavaScript.
 
 ## Sites
 
+* [Mozilla Developer Network][mdn]  
+  Mozilla has done a great job documenting many of the tools needed to build
+  websites. Their documentation on JavaScript, in particular is great.
+
+* [WebPlatform][webplatform]  
+  Joint project by many organizations to do a better job documenting HTML, CSS,
+  JavaScript, etc. This is still a work in progress, but it's pretty good for
+  CSS. In particular, you should use this over W3Schools (which some people
+  even recommend you avoid by always adding `-w3schools` to your searches).
+
 * [nodeschool.io][nodeschool]  
   Great lessons to learn Node.js.
 
 * [SlowmoJS][slowmojs] and [metajs][metajs]  
   Sites for visualizing code flow.
+
+* [Can I Use&hellip;][caniuse]  
+  This site will tell you whether a browser includes certain functionality and
+  will allow you to quickly choose whether you should use that feature or not.
 
 
 ## Articles
@@ -23,12 +37,16 @@ learning JavaScript.
 
 ## Documentation
 
-[JavaScript Arithmetic Operators][js-arithmetic]  
-[JavaScript Assignment Operators][js-assignment]  
-[JavaScript Comparison Operators][js-comparison]  
-[JavaScript Logic Operators][js-logic]  
-[JavaScript String Operators][js-strings]  
-[JavaScript `typeof`][js-typeof]  
+[Arithmetic Operators][mdn-arithmetic]  
+[Assignment Operators][mdn-assignment]  
+[Comparison Operators][mdn-comparison]  
+[Logic Operators][mdn-logic]  
+[String Operators][mdn-strings]  
+[`typeof`][mdn-typeof]  
+[Dates][mdn-dates]  
+[`setTimeout`][mdn-settimeout]  
+[`setTimeout` (Node)][node-settimeout]  
+[`readFile`][node-readfile]  
 
 
 ## Tools
@@ -128,10 +146,14 @@ expectations.
   because it dives into each idea quickly. This book gives academic details
   on concepts like scope and closures.
 
+
+[mdn]: https://developer.mozilla.org/
+[webplatform]: http://www.webplatform.org
 [jsbooks]: http://jsbooks.revolunet.com
 [nodeschool]: http://nodeschool.io/
 [slowmojs]: http://toolness.github.io/slowmo-js/
 [metajs]: http://int3.github.io/metajs/
+[caniuse]: http://caniuse.com
 
 [browsers]: http://docs.webplatform.org/wiki/concepts/internet_and_web/how_browsers_work
 [impostor]: https://medium.com/tech-talk/bdae04e46ec5
@@ -141,12 +163,16 @@ expectations.
 
 [powells]: https://www.google.com/maps/place/Powell's+Books:+Bldg+2/@45.5238358,-122.6824438,18z
 
-[js-arithmetic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
-[js-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators
-[js-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
-[js-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
-[js-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
-[js-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+[mdn-arithmetic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+[mdn-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators
+[mdn-comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
+[mdn-logic]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+[mdn-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators
+[mdn-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+[mdn-dates]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+[mdn-settimeout]: https://developer.mozilla.org/en-US/docs/Web/API/Window.setTimeout
+[node-readfile]: http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
+[node-settimeout]: http://nodejs.org/api/timers.html#timers_settimeout_callback_delay_arg
 
 [node]: http://nodejs.org
 [npm]: https://www.npmjs.org
