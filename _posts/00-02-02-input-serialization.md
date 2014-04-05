@@ -212,6 +212,8 @@ The game library can be installed with:
 
 - Create another map or extend the existing map.
 
+- Consider using [prompt][prompt] or [chalk][chalk] to spice up your game.
+
 - Make your game more interesting by adding things to the rooms. For instance,
 
   > You're in a room with a cactus. Not much is going on.
@@ -237,3 +239,5 @@ The game library can be installed with:
 [node-readline]: http://nodejs.org/api/readline.html
 [github-jsi-game-library]: https://github.com/portlandcodeschool/jsi-gamelib
 [github-jsi-game-library-issues]: https://github.com/portlandcodeschool/jsi-gamelib/issues
+[prompt]: https://github.com/flatiron/prompt
+[chalk]: https://github.com/sindresorhus/chalk
