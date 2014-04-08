@@ -179,7 +179,6 @@ callbacks.forEach(function(c) { c(); });
 * What's the actual result of this code?
 * How can you avoid this gotcha?
 
-
 <aside>
   **`let`**
 
@@ -187,6 +186,30 @@ callbacks.forEach(function(c) { c(); });
   block-scope variables. This will make JavaScript a bit more similar to other
   programming languages and address some of the gotchas above.
 </aside>
+
+
+### Immediately invoked function expressions
+
+It's possible to create an environment, or scope, to protect a set of variables
+from access. This is used frequently by JavaScript programmers.
+
+{% highlight javascript %}
+var greet = (function() {
+  var greeting = "Hello, ";
+
+  return function(personName) {
+    console.log(greeting + personName);
+  };
+})();
+
+greet('Whitney');
+{% endhighlight %}
+
+Note that `sayHello` is set to a function that actually returns a function. The
+inner function is the one that's called later with `greet('Whitney')`. The
+`greeting` variable is not accessible outside of the scope created by the
+immediately invoked function expression. This example is a bit contrived, but
+we'll start using these soon.
 
 
 ## Takeaway
