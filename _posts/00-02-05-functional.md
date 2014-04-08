@@ -150,6 +150,13 @@ var hi = _.partial(greet, 'hi');
 hi('fred'); //=> 'hi fred'
 {% endhighlight %}
 
+Basically, calling `_.partial` on `greet` locks in the value of the `greeting`
+parameter. The function, `hi`, that's returned from `_.partial` can be called
+with any remaining arguments. In this case that's just name `name`. Calling
+`hi` will put all the arguments together properly and result in a call to the
+original function, `greet`, as if it had been called like so:
+`greet('hi', 'fred')`.
+
 You'll often hear currying and partial application used as synonyms, but
 they're actually slightly different. A curry of the `greet` function would
 look like this (note the location of parenthesis):
@@ -251,6 +258,16 @@ out how an abstraction for this will work.
 
 Don't peek below before we discuss. :)
 
+<div style="height: 200px;"></div>
+
+Space intentionally left blank.
+
+<div style="height: 200px;"></div>
+
+Really, no peeking! :)
+
+<div style="height: 200px;"></div>
+
 {% highlight javascript %}
 var numbers = [1, 2, 3, 4, 5, 6];
 var sum = _.reduce(numbers, function(sum, n) { return sum + n; }, 0);
@@ -332,7 +349,10 @@ answer, please let me know.
 </aside>
 
 
-## Challenge
+## More (Challenge)
+
+There are so many more abstractions that can be built and used to our
+advantage!
 
 Choose one of the below functions from [Lo-Dash][lodash]. Learn waht it does
 well enough to explain it to the group. Come up with some examples that

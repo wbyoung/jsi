@@ -7,6 +7,25 @@ date: 2014-05-23 00:00:00
 
 ## Class Flow
 
+* Go through each of the different functions and discuss
+* If short on time, consider skipping `once` and/or `filter` and have the
+  students do these during the final challenge.
+
+## Memoize
+
+1. Show the Fibonacci code.
+1. Ask if anyone knows why it's slow (before they answer, make sure they didn't
+   know the answer before class started). The expectation is that no one knows
+   why.
+1. Discuss why it may be slow. Talk through what the computer has to do step by
+   step. Have someone come write on the board to show the sequence of events.
+1. Show the tracing program below and explain how it works.
+1. Count the number of occurrences of calculating a sub-result using `grep`.
+   You'll have to briefly explain `grep` and regular expressions and note that
+   we'll come back to regular expressions soon.
+1. Discuss how to make it faster &mdash; don't re-calculate a sub result when
+   we've already calculated it once.
+1. Continue with the code below.
 
 Here's a tracing program for the Fibonacci sequence:
 
@@ -43,8 +62,20 @@ node fibonacci.js 20 | grep "fibonacci\(8\) ->" | wc -l
 {% endhighlight %}
 
 
-Here's the goal that we want to build toward before we move over to abstracting
-the memoize function.
+Start by getting to this:
+
+{% highlight javascript %}
+var cache = {};
+var factorial = function(n) {
+  if (!cache[n]) {
+    cache[n] = n === 0 ? 1 : n * factorial(n - 1);
+  }
+  return cache[n];
+};
+{% endhighlight %}
+
+Then use an immediately invoked function expression to get to this state
+before moving over to abstracting the `memoize` function.
 
 {% highlight javascript %}
 var fibonacci = (function() {
@@ -74,7 +105,9 @@ var factorial = (function() {
 })();
 {% endhighlight %}
 
-The memoize function should look like this (for a single argument):
+Allow students to try to abstract the `memoize` function on their own. This
+could be quite a challenge. In the end, the `memoize` function should look
+like this (for a single argument):
 
 {% highlight javascript %}
 var memoize = function(fn) {
@@ -101,9 +134,11 @@ var memoize = function(fn) {
 };
 {% endhighlight %}
 
-## Partial
 
-We won't get all the way through partial applications
+## Partial Application
+
+We won't get all the way through partial applications since we can't, `call`,
+`apply`, and `arguments`.
 
 {% highlight javascript %}
 var partial = function(fn, arg1) {
@@ -142,15 +177,58 @@ var hi = partial(greet, 'hi');
 console.log(hi('Whitney', 'Young'));
 {% endhighlight %}
 
+
 ## Reduce
+
+This one will probably be pretty tricky. Take it really slowly through each one
+of the examples. Try to get the students to realize that the following things
+are shared between each code base:
+
+* An input array
+* A result value set to some initial value
+* Alteration of the result value for each item in the array
+
+If you're feeling that there's some time, and you feel that people weren't
+totally confused by `curry`, you could implement the `reduce` function to
+really give them understanding of how it works. Or you could have them do it,
+too. It looks like this:
+
+{% highlight javascript %}
+var fold = function(array, fn, start) {
+  array.forEach(function(item) {
+    start = fn(start, item);
+  });
+  return start;
+};
+{% endhighlight %}
+
 
 This is the solution to the reduce/fold challenge:
 
 {% highlight javascript %}
-_.reduce(pairs, function(obj, pair) { obj[pair[0]] = pair[1]; return obj; }, {});
+_.reduce(pairs, function(obj, pair) {
+  obj[pair[0]] = pair[1];
+  return obj;
+}, {});
 
 var zipObject = _.partialRight(_.reduce, function(obj, pair) {
   obj[pair[0]] = pair[1];
   return obj;
 }, {});
 {% endhighlight %}
+
+
+## Final Challenge
+
+Have the students present their function that they studied. Have them teach
+about how it works and what it does. Politely correct only those details that
+matter. Ignore minor things that may not be right.
+
+Have them present their code and implementation if they wrote any. Ask them to
+discuss challenges and difficulties they faced while implementing their version
+(even if they didn't get it done). If they didn't get it done, ask them how
+they might implement it.
+
+If need be, have this spill over into the next day. If it's on the next day,
+have the students reflect on whether it was easy to remember everything that
+they did from the previous day.
