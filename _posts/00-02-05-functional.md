@@ -341,11 +341,7 @@ In `_`, this function is called `zipObject` and is so named because of its
 relation to `zip` which we may explore later.
 
 <aside>
-**Zip**
-
-I don't know where this name comes from. The first time I ever saw it was in
-Python, but don't know if it originated there or not. If you come across an
-answer, please let me know.
+The formal term for _zip_ is [convolution][convolution].
 </aside>
 
 
@@ -397,3 +393,4 @@ increase your understanding of how it works.
 [lodash-merge]: http://lodash.com/docs#merge
 [lodash-values]: http://lodash.com/docs#values
 [lodash-keys]: http://lodash.com/docs#keys
+[convolution]: http://en.wikipedia.org/wiki/Convolution_(computer_science)
