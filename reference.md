@@ -49,6 +49,8 @@ learning JavaScript.
 [`readFile`][node-readfile]  
 [`readline`][node-readline]  
 [Debugger][node-debugger]  
+[`arguments`][mdn-arguments]  
+[`bind`][mdn-bind]  
 
 
 ## Tools
@@ -173,6 +175,8 @@ expectations.
 [mdn-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 [mdn-dates]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 [mdn-settimeout]: https://developer.mozilla.org/en-US/docs/Web/API/Window.setTimeout
+[mdn-arguments]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments
+[mdn-bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [node-readfile]: http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
 [node-settimeout]: http://nodejs.org/api/timers.html#timers_settimeout_callback_delay_arg
 [node-readline]: http://nodejs.org/api/readline.html
