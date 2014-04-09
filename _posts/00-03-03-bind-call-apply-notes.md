@@ -5,7 +5,7 @@ class: bind+call+apply
 date: 2014-05-29 00:00:00
 ---
 
-## Class FLow
+## Class Flow
 
 ## Memoize
 
