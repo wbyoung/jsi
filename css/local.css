@@ -27,6 +27,15 @@ pre {
   overflow-x: scroll;
 }
 
+.conceptual-code pre {
+  border: 2px dashed #f77;
+}
+.conceptual-code pre:before {
+  content: "// warning: this code will not work.";
+  display: block;
+  color: #a44;
+}
+
 h2 {
   margin-top: 2em;
   border-bottom: 1px solid #ddd;
