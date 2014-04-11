@@ -1,7 +1,7 @@
 ---
 layout: post
-title: This Keyword
-class: this
+title: Inheritance
+class: inheritance
 date: 2014-05-28 00:00:00
 ---
 
