@@ -298,7 +298,7 @@ invoked.
 - Add a `fullName` method and log that.
 
 
-#### Encapsulation
+### Encapsulation
 
 Sometimes we want properties to be accessible by people who use instances of
 our classes. Sometimes we don't. Usually we don't. Protecting the properties
