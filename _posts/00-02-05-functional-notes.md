@@ -116,6 +116,9 @@ var memoize = function(fn) {
     return cache[arg] || (cache[arg] = fn(arg));
   };
 };
+var fibonacci = memoize(function(n) {
+  return n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : n;
+});
 {% endhighlight %}
 
 For reference, eventually, we'll get it to this, but for now we aren't going to
