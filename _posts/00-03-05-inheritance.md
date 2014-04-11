@@ -5,7 +5,177 @@ class: inheritance
 date: 2014-05-31 00:00:00
 ---
 
+What happens when one object is like another? How can we re-use the code that's
+similar between the two objects?
 
+## Extending Classes
+
+Creating a class by _extending_ all of the functionality of another class is
+called _inheritance_. So when and how do we do this?
+
+Let's say we have a class `Fruit`. We want to create two new classes `Apple`
+and `Banana`. We'd be able to do things like:
+
+{% highlight javascript %}
+var banana = new Banana();
+
+// banana properties
+banana.genus(); //=> 'musa'
+banana.epicarp(); //=> 'peel'
+banana.mesocarp(); //=> 'inner peel'
+banana.endocarp(); //=> 'yummy banana'
+banana.calories(); //=> 105
+banana.color(); //=> 'yellow'
+
+// banana methods
+banana.peel();
+
+// apple properties
+var apple = new Apple();
+apple.genus(); //=> 'malus'
+apple.epicarp(); //=> 'skin'
+apple.mesocarp(); //=> 'yummy apple'
+apple.endocarp(); //=> 'core'
+apple.calories(); //=> 95
+apple.color(); //=> 'red' (yes, in this world, all apples are red)
+
+// apple methods
+apple.core();
+apple.slice();
+{% endhighlight %}
+
+There's a lot of things that are common properties for each of these two
+fruits. We shouldn't have to re-define functionality that's shared between the
+two. So we'll _extend_ `Fruit` to create `Apple` and `Banana`.
+
+Let's look at how this is done in a few other languages first:
+
+{% highlight ruby %}
+# ruby
+class Fruit < Object
+end
+class Apple < Fruit
+end
+class Banana < Fruit
+end
+{% endhighlight %}
+
+{% highlight python %}
+# python
+class Fruit(object):
+  pass # no implementation (yet)
+class Apple(Fruit):
+  pass
+class Banana(Fruit):
+  pass
+{% endhighlight %}
+
+{% highlight c++ %}
+// c++
+class Fruit {
+};
+class Apple : Fruit {
+};
+class Banana : Fruit {
+};
+{% endhighlight %}
+
+{% highlight java %}
+// java
+public class Fruit {
+}
+public class Apple extends Fruit {
+}
+public class Banana extends Fruit {
+}
+{% endhighlight %}
+
+{% highlight objective-c %}
+// objective-c
+@interface Fruit : NSObject
+@end
+@interface Apple : Fruit
+@end
+@interface Banana : Fruit
+@end
+{% endhighlight %}
+
+Now that we've seen how simple it is in other languages, let's look at JavaScript:
+
+{% highlight javascript %}
+function Fruit() {}
+
+function Apple() {}
+function ApplePrototype() {}
+ApplePrototype.prototype = Fruit.prototype;
+Apple.prototype = new ApplePrototype();
+Apple.prototype.constructor = Apple;
+
+function Banana() {}
+function BananaPrototype() {}
+BananaPrototype.prototype = Fruit.prototype;
+Banana.prototype = new BananaPrototype();
+Banana.prototype.constructor = Banana;
+{% endhighlight %}
+
+Don't even try to understand this. It's a mess!
+
+This is the technically correct way to write objects that inherit from others
+in JavaScript. Until recently, there wasn't even a built in shorthand for this.
+Some people wrote their own abstraction, `Object.create`:
+
+{% highlight javascript %}
+// Object.create Polyfill (MDN has a better version of this)
+if (typeof Object.create !== 'function') {
+  Object.create = function (o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+  };
+}
+{% endhighlight %}
+
+Again, don't worry about understanding that code. `Object.create` is built in
+to Node. This is just to give you history/background. You'll see class
+extension done in various different ways in JS.
+
+Using this abstraction, we can do better, but it's still not wonderful in
+JavaScript:
+
+{% highlight javascript %}
+function Fruit() {}
+
+function Apple() {}
+Apple.prototype = Object.create(Vehicle.prototype);
+Apple.prototype.constructor = Apple;
+
+function Banana() {}
+Banana.prototype = Object.create(Vehicle.prototype);
+Banana.prototype.constructor = Banana;
+{% endhighlight %}
+
+## Challenge
+
+* Implement the following constructors/methods:
+
+  * `Fruit`
+  * `Fruit.prototype.genus`
+  * `Fruit.prototype.epicarp`
+  * `Fruit.prototype.mesocarp`
+  * `Fruit.prototype.endocarp`
+  * `Fruit.prototype.calories`
+  * `Fruit.prototype.setCalories`
+  * `Fruit.prototype.color`
+  * `Fruit.prototype.setColor`
+  * `Apple`
+  * `Apple.prototype.core` &rarr; log `'The red apple is being cored'`
+  * `Apple.prototype.slice` &rarr; log `'The red apple is being peeled'`
+  * `Banana`
+  * `Banana.prototype.peel` &rarr; log `'The yellow banana is being peeled'`
+
+## Calling Super
+
+TODO: parent, child, super, etc.
 
 ## Abuse of Inheritance
 
