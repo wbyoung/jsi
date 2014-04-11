@@ -5,7 +5,9 @@ class: oo
 date: 2014-05-27 00:00:00
 ---
 
-Objects in JavaScript could also be taught like so:
+## Alternative Approach
+
+Just for future reference, objects in JavaScript could also be taught like so:
 
 {% highlight javascript %}
 // first start with functions on object

@@ -2,7 +2,7 @@
 layout: post
 title: Inheritance
 class: inheritance
-date: 2014-05-28 00:00:00
+date: 2014-05-31 00:00:00
 ---
 
 ## _Is A_ vs _Has A_

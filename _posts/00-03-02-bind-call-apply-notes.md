@@ -5,6 +5,12 @@ class: bind+call+apply
 date: 2014-05-29 00:00:00
 ---
 
+This class may not feel appropriate at this time. You'll have to gauge how well
+they understood objects and the functional stuff. Don't push it. If it doesn't
+feel right, try coming back to this in week four. Try not to delay it too much,
+though because the functions being built here were recently introduced. We
+don't want them to forget what those functions were or how they worked.
+
 ## Class Flow
 
 1. Start by looking at the two code examples. Students may guess that the
