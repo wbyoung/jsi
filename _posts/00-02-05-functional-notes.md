@@ -235,3 +235,65 @@ they might implement it.
 If need be, have this spill over into the next day. If it's on the next day,
 have the students reflect on whether it was easy to remember everything that
 they did from the previous day.
+
+
+## Promises
+
+This was an attempt to try to show what promises could do for callback flow and
+how you might build that on your own. The promise implementation here isn't
+very good and I'm not sure it's illustrative either. This probably would be bad
+to use even when discussing promises later. I'm putting it in here in case it
+ever becomes useful later.
+
+{% highlight javascript %}
+// save as promise.js
+// echo "promise.js" > filename.txt
+// node promise.js filename.txt
+
+var fs = require('fs');
+
+// fs.readFile(process.argv[2], { encoding: 'utf8' }, function(err, fileName) {
+//   fs.readFile(fileName.trim(), { encoding: 'utf8' }, function(err, contents) {
+//     console.log(contents);
+//   });
+// });
+
+
+var readFile = function(file, options) {
+  var promise = {};
+
+  promise.thenCallbacks = [];
+  promise.errorCallback = function(err) { throw new Error(err) };
+  promise.then = function(callback) {
+    promise.thenCallbacks.push(callback);
+    return promise;
+  };
+  promise.error = function(callback) {
+    promise.errorCallback = callback;
+    return promise;
+  };
+
+  fs.readFile(file, options, function(err, data) {
+    var success = promise.thenCallbacks.shift();
+    if (err) { promise.errorCallback(err); }
+    else {
+      var result = success(data);
+      var thenable = (result && typeof result.then === 'function');
+      if (thenable) {
+        result.thenCallbacks = promise.thenCallbacks;
+        result.errorCallback = promise.errorCallback;
+      }
+    }
+  });
+
+  return promise;
+};
+
+readFile(process.argv[2], { encoding: 'utf8' })
+.then(function(fileName) {
+  return readFile(fileName.trim(), { encoding: 'utf8' });
+})
+.then(function(contents) {
+  console.log(contents);
+});
+{% endhighlight %}
