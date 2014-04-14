@@ -104,6 +104,20 @@ Finally, you can do large chunks of code:
     explain();
 </aside>
 
+
+### Sass
+
+[Sass][sass] makes CSS a lot easier to work with. Learn a little about Sass
+and make your generator handle sass files.
+
+
+### Watch Mode
+
+Make you generator accept a flag that will keep it watching all files for
+changes. When it notices a change, it should re-generate the output for that
+file.
+
+
 ### Jekyll
 
 Add some of the features that [Jekyll][jekyll] has to your generator. If you
@@ -111,3 +125,4 @@ want to be really ambitious, you can try to make your generator a drop-in
 replacement for Jekyll. But be warned, this could take you months to complete!
 
 [jekyll]: http://jekyllrb.com
+[sass]: http://sass-lang.com
