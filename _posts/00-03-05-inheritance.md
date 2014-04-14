@@ -11,7 +11,7 @@ similar between the two objects?
 ## Extending Classes
 
 Creating a class by _extending_ all of the functionality of another class is
-called _inheritance_. So when and how do we do this?
+called _inheritance_ or _subclassing_. So when and how do we do this?
 
 Let's say we have a class `Fruit`. We want to create two new classes `Apple`
 and `Banana`. We'd be able to do things like:
@@ -20,6 +20,8 @@ and `Banana`. We'd be able to do things like:
 var banana = new Banana();
 
 // banana properties
+banana.edible(); //=> true
+banana.compostable(); //=> true
 banana.genus(); //=> 'musa'
 banana.epicarp(); //=> 'peel'
 banana.mesocarp(); //=> 'inner peel'
@@ -32,6 +34,8 @@ banana.peel();
 
 // apple properties
 var apple = new Apple();
+apple.edible(); //=> true
+apple.compostable(); //=> true
 apple.genus(); //=> 'malus'
 apple.epicarp(); //=> 'skin'
 apple.mesocarp(); //=> 'yummy apple'
@@ -159,6 +163,8 @@ Banana.prototype.constructor = Banana;
 * Implement the following constructors/methods:
 
   * `Fruit`
+  * `Fruit.prototype.edible`
+  * `Fruit.prototype.compostable`
   * `Fruit.prototype.genus`
   * `Fruit.prototype.epicarp`
   * `Fruit.prototype.mesocarp`
@@ -173,9 +179,80 @@ Banana.prototype.constructor = Banana;
   * `Banana`
   * `Banana.prototype.peel` &rarr; log `'The yellow banana is being peeled'`
 
-## Calling Super
+## Overriding Methods & Calling Super
 
-TODO: parent, child, super, etc.
+Sometimes you may create a subclass, implement a method, but use methods
+defined on the class your extending (also called the _superclass_ or
+_parent class_).
+
+For instance, perhaps there's a method you want to implement,
+`Fruit.prototype.prepareForEating` so that any fruit can be prepared to be
+eaten. For an apple, nothing needs to be done. But a banana needs to be peeled.
+
+Let's take a look:
+
+{% highlight javascript %}
+Fruit.prototype.prepareForEating = function() {
+  // nothing needs to be done by default to prepare fruit
+  // to be eaten.
+};
+
+Banana.prototype.prepareForEating = function() {
+  // we need to peel the banana now
+};
+
+var apple = new Apple();
+apple.prepareForEating();
+
+var banana = new Banana();
+banana.prepareForEating();
+{% endhighlight %}
+
+The method on `Banana` is called _overriding_ the implementation of
+`prepareForEating` on the _base class_, `Fruit`.
+
+But eventually, we may come along and enhance what it means to prepare any
+fruit for eating by altering the method on the base class.
+
+{% highlight javascript %}
+Fruit.prototype.prepareForEating = function() {
+  var safe = true;
+  if (this.isRotten()) { safe = false; }
+  else if (this.hasMold()) { safe = false; }
+  return safe;
+};
+
+var person = new Person();
+var apple = new Apple();
+if (apple.prepareForEating()) {
+  person.eat(apple);
+}
+
+var banana = new Banana();
+if (banana.prepareForEating()) {
+  person.eat(banana);
+}
+{% endhighlight %}
+
+This assumes that `Fruit.prototype.isRotten` and `Fruit.prototype.hasMold` are
+methods that have been defined.
+
+### Discussion
+
+There are a few things wrong with this code now that we've extended the base
+class implementation. What are these problems and how do we fix them? Don't
+actually fix them just yet, but how would they be addressed? Work with the code
+a little to try to understand what the problems are.
+
+### Challenge
+
+Model the classroom using object oriented design principles.
+
+- Start with just a few objects.
+- Can you use sub-classing for any of these objects?
+- Try to figure out a method that would make sense for a subclass to override.
+  Would you need to call super when you override those methods?
+
 
 ## Abuse of Inheritance
 
