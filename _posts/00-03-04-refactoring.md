@@ -2,7 +2,10 @@
 layout: post
 title: Refactoring
 class: refactoring
-date: 2014-05-30 01:00:00
+date: 2014-06-06 01:00:00
+notes:
+  This class has been moved back a week because of the shortened week here,
+  but would usually be done during the week of the Sudoku challenges.
 ---
 
 By now you've written a good amount of code. You've probably ended up with a

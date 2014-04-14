@@ -2,7 +2,7 @@
 layout: notes
 title: Inheritance Notes
 class: inheritance
-date: 2014-05-31 00:00:00
+date: 2014-05-30 01:00:00
 ---
 
 ## Class Flow
