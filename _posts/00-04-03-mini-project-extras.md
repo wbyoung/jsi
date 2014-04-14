@@ -7,6 +7,14 @@ date: 2014-06-04 00:00:00
 
 ## Project Extras
 
+If you finish this project before the end of the week, try tackling one or more
+of these advanced features.
+
+### Configurable Layouts
+
+Allow each page on your site to specify which layout it wants to use rather
+than using one global layout.
+
 ### Markdown
 
 Markdown is a wonderful _markup language_ for writing content for web pages.
@@ -126,3 +134,10 @@ replacement for Jekyll. But be warned, this could take you months to complete!
 
 [jekyll]: http://jekyllrb.com
 [sass]: http://sass-lang.com
+
+
+### GitHub Pages Integration
+
+Determine a good way to make your generator work more seamlessly with GitHub
+pages. Before you implement your ideas, discuss them with your instructor to
+make sure you're heading down the right path.
