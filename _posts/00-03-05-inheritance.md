@@ -208,7 +208,7 @@ var banana = new Banana();
 banana.prepareForEating();
 {% endhighlight %}
 
-The method on `Banana` is called _overriding_ the implementation of
+The `prepareForEating` method on `Banana` _overrides_ the implementation of
 `prepareForEating` on the _base class_, `Fruit`.
 
 But eventually, we may come along and enhance what it means to prepare any
@@ -322,8 +322,8 @@ function NewspaperPage() {
 }
 {% endhighlight %}
 
-This example is slightly far-fetched. This is not the _right_ representation
-of the relationship between these objects. There is no right representation.
+This example is slightly far-fetched. This is not _the right_ representation
+of the relationship between these objects. There is no _right_ representation.
 Depending on the application and how these objects will be used, you could come
 up with hundreds of configurations.
 
