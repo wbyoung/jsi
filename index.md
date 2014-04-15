@@ -1,9 +1,7 @@
 ---
-layout: default
-title: Home
+layout: page
+title: "Portland Code School: JavaScript Immersion"
 ---
-
-# Portland Code School: JavaScript Immersion
 
 Welcome to PCS. This site will host the course curriculum and links to various
 resources that we'll use throughout the course.
