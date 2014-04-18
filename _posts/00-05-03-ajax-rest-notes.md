@@ -81,3 +81,8 @@ Example request:
 [flickr-api-url]: https://www.flickr.com/services/api/misc.urls.html
 [flickr-api-explorer]: https://www.flickr.com/services/api/explore/flickr.interestingness.getList
 [flickr-api-interestingness]: https://www.flickr.com/services/api/flickr.interestingness.getList.html
+
+## REST
+
+We're not actually going to hit on REST during this class's challenges, but
+hopefully one of the next classes will use a service with REST.
