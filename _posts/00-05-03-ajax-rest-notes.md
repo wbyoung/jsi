@@ -67,6 +67,11 @@ $.ajax(url, { dataType: 'json' })
   });
 {% endhighlight %}
 
+The reason to show each of these different ways of doing things as the students
+will find code examples with each of them. It also will allow discussion about
+the progression of libraries and backwards compatibility.
+
+
 ## Flickr
 
 * [Flickr API interestingness][flickr-api-interestingness]
