@@ -63,6 +63,7 @@ learning JavaScript.
 [JSDoc][jsdoc]  
 [Commander.js][commander]  
 [Lo-Dash][lodash]  
+[Sass][sass]  
 
 
 ## Online Books
@@ -190,3 +191,4 @@ expectations.
 [jsdoc]: http://usejsdoc.org
 [commander]: https://www.npmjs.org/package/commander
 [lodash]: http://lodash.com
+[sass]: http://sass-lang.com

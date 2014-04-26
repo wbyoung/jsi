@@ -126,3 +126,8 @@ iframe {
   height: 300px;
   border: 1px solid #ccc;
 }
+
+.sass .err {
+  color: inherit;
+  background-color: inherit;
+}
