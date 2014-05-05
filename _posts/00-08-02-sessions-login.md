@@ -9,11 +9,12 @@ Allowing uses to sign up and log into your website is a complicated process.
 It's gotten more complicated recently for developers as many sites are allowing
 people to log in using Google, Twitter, Facebook, etc.
 
+
 ## Problems
 
-HTTP wasn't designed with authentication in mind. It was designed to allow
-hundreds of thousands of requests to be made to a server without overloading
-the server.
+HTTP wasn't designed to deliver custom content on a per-user basis. It was
+designed to allow hundreds of thousands of requests to be made to a server
+without overloading the server.
 
 What's that mean?
 
@@ -35,9 +36,82 @@ problems at the application level, above HTTP. We'll use features of HTTP to
 achieve this, but it wouldn't be possible without the application handling some
 of the work.
 
+
+### HTTP Headers
+
+We haven't really discussed HTTP in detail up until now. The best way to
+understand HTTP is to see it in action, so let's do just that.
+
+Run the _netcat_ tool:
+
+    nc -l 9000
+
+Now open your browser and go to `http://localhost:9000/`. Your browser is
+making an HTTP request to your computer on port `9000` and will continue to
+wait for a response for a while. The command you ran is actually just listening
+on port `9000` for anything that comes in. If you go look at it, you can see
+the request that your web browser issued.
+
+Let's respond.
+
+Type whatever you want to followed by a newline, then &#8963;D (which tells
+`nc` you're finished with this transmission). Try responding with some HTML and
+see what happens.
+
+A proper response is specifically formatted. This is what node's `http` module
+does when you create a server. Let's give a proper response now. You could type
+this in manually, but we'll do it a little differently to avoid quite as much
+copying and pasting.
+
+Create a new directory to work in, and `cd` to it. Create a file called
+`index.html` with some HTML in it. Also create a file, `index.headers` with the
+following content (make sure you have two blank lines at the bottom of your file):
+
+    HTTP/1.1 200 OK
+    Content-Type: text/html; charset=utf-8
+
+Now run `cat index.headers index.html` and make sure there's at least one
+blank line between your headers and your HTML. Once you've got that, run
+`cat index.headers index.html | nc -l 9000` and access your page in the
+browser.
+
+Use Chrome's developer tools to view the HTTP response headers. Try adding a
+custom HTTP header to your response. What happens if you change the content
+type so it's XML instead of HTML?
+
+<aside>
+**HTTP Keep-Alive**
+
+Run `nc -kl 9000` which keeps netcat running after you respond (it will wait
+for the server to close the connection). Play around with sending responses to
+your browser this way.
+
+HTTP Keep-Alive allows a browser to keep a connection to a server and issue
+multiple HTTP requests over one TCP connection. This optimization improves
+performance.
+</aside>
+
+### Challenge
+
+Use _netcat_ to respond to an HTTP request and display an image to the browser.
+
+
 ### Cookies
 
-Cookie explanation coming soon&hellip;
+Cookies are little bits of data that are stored by web browsers. Any time a
+request is made to a server, the browser will look for any cookies it stored
+that are associated with that server and send the cookie data along with the
+request.
+
+Either the client or the server can set cookies.
+
+ - Clients set cookies via JavaScript
+ - Servers set cookies via HTTP headers
+ - Browsers transmit cookies via HTTP headers
+
+Your server side application can use cookies to track users over multiple
+requests.
+
 
 <aside>
 **HTTP Only Cookies**
@@ -65,10 +139,26 @@ that and associate it with someone using your site, use database backed
 sessions and store the data on the server.
 </aside>
 
+### Challenge
 
-### HTTP Headers
+Create an application that uses cookies on the client and server sides. Your
+client side page should be served by the server (rather than loaded via the
+`file://` protocol).
 
-HTTP header explanation coming soon&hellip;
+The server side should:
+
+ - Log cookies for all incoming requests
+ - Create a cookie, `last-request-time`
+ - Log a message like `last access by user: 10s ago`
+
+The client side should:
+
+- Have an input that allows the user to enter their favorite color
+- When the user enters their favorite color, store it in a cookie,
+  `favorite-color`, remove the input and display the favorite color as well as
+  an edit button.
+- Subsequent access to the page should not show the input if the favorite color
+  is already known.
 
 
 ## Security
@@ -134,7 +224,11 @@ useful middleware modules:
 - [`cookie-session`][middleware-cookie-session] for sessions persisted in cookies
 
 
-## Authentication Example
+## Putting it All Together
+
+Once you understand cookies and the security issues behind authentication, you
+can start to build up an authentication, authorization, and user management
+system.
 
 The [`node-basic-auth-examples`][node-basic-auth-examples] project
 [demonstrates][node-basic-auth-heroku] cookie based authentication as well as
@@ -144,9 +238,54 @@ token based authentication via HTTP headers.
 
 **Advanced:** Update the authentication example to persist users and sessions.
 
+
+## Definitions
+
+_Authentication_ is what we think of as the login process. Usually we
+authenticate with a web applications by providing a username and password.
+
+_Authorization_ is the process of determining what a user is a allowed to do.
+Can the currently authenticated user create posts? Can they delete users?
+
+
+## More
+
+Cookies are a good way to handle associating an authenticated user with a
+request, but they only work when a browser is in place.
+
+APIs typically use tokens to determine the user who's making the request and
+_authorize_ that they have access to access the requested resource of perform
+the requested action. These tokens are usually returned by the API after the
+initial authentication, then passed via a HTTP header for all subsequent
+requests that require authorization.
+
+### OAuth
+
+OAuth is a popular standard for authentication that's widely used. It's usually
+the system that you use when you log into a site using your Google, Twitter,
+Facebook, or whatever account.
+
+It also supports scenarios for API authorization. Applications that wish to
+make use of many modern APIs authenticate via OAuth, then pass authorization
+tokens for each API call.
+
+Google does a pretty good job documenting OAuth for
+[authentication (login)][google-oauth-login] and
+[authorization (API access)][google-oauth].
+
+### Passport
+
+[Passport][passport] is a Node.js module that allows you to easily support many
+different authentication strategies (including pretty much every popular social
+media site you could imagine).
+
+
 [stateless]: http://en.wikipedia.org/wiki/Stateless_protocol
 [node-basic-auth-examples]: https://github.com/wbyoung/node-basic-auth-examples
 [node-basic-auth-heroku]: http://node-basic-auth-examples.herokuapp.com
 [middleware-cookie-parser]: https://github.com/expressjs/cookie-parser
 [middleware-session]: https://github.com/expressjs/session
 [middleware-cookie-session]: https://github.com/expressjs/cookie-session
+[google-oauth]: https://developers.google.com/accounts/docs/OAuth2
+[google-oauth-login]: https://developers.google.com/accounts/docs/OAuth2Login
+[passport]: http://passportjs.org
