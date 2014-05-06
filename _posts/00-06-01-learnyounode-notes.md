@@ -21,12 +21,28 @@ date: 2014-06-16 00:00:00
   - `http uppercaserer` and `http json api server` are good network exercises
     as well.
 
-- After lunch, start building up a server. The students can (and should) try to
-  do this on their own, but it will likely be something where we do a little
-  together, then they do a little repeating on their own. The server will
-  handle the following things that `express` does well:
+- After lunch, start building up a server. Use TDD while doing this. The
+  students can (and should) try to do this on their own, but it will likely be
+  something where we do a little together, then they do a little repeating on
+  their own. The server will handle the following things that `express` does
+  well:
   - Routing, GET, POST, DELETE, PUT (and parameters in routes, `req.params`)
   - Return proper content type: HTML, JSON
   - Parsing GET queries (`req.query`),  & POST body (`req.body`)
   - Simple lookup of all input (`req.param()`)
   - Redirects
+
+- TDD for the server will include:
+  - Using an HTTP client to issue requests.
+  - Testing responses (including body & headers).
+  - Including a `fixtures` directory for pages being served.
+  - Including an `expected` directory for the bodies of responses.
+  - Splitting the API logic out into _controller_ like modules so they can be
+    tested without issuing requests.
+  - Could add a `storage` type object that holds all of the people and use
+    _stubs_ to ensure that the storage methods get called during testing of the
+    api logic (disadvantage: throwing tons of stuff at them all at once). Or
+    could just expose the storage object to the tests (disadvantage: exposing
+    internals to tests). Or could simply call another method afterwards
+    (disadvantage: not testing in isolation). Choose one of these based on
+    where the class seems to be.
