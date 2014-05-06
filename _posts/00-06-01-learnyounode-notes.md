@@ -21,6 +21,9 @@ date: 2014-06-16 00:00:00
   - `http uppercaserer` and `http json api server` are good network exercises
     as well.
 
+- Have students discuss/present where they had troubles with the tutorial, what
+  they learned, and what they didn't grasp.
+
 - After lunch, start building up a server. Use TDD while doing this. The
   students can (and should) try to do this on their own, but it will likely be
   something where we do a little together, then they do a little repeating on

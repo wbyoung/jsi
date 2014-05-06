@@ -8,6 +8,10 @@ date: 2014-07-01 00:00:00
 ## Class Flow
 
 - Walk through the basic concepts of authentication
+- Have them look at the `node-basic-auth-examples` project and read the code.
+  After they do this, have each group present the questions that they asked
+  themselves through the process of reading the code, and how they answered
+  them. Which questions were they unable to find answers to?
 - If time allows, try to have them implement authentication via cookies. If
   it's feeling crunched, just go through the `node-basic-auth-examples` project
   and discuss the code.  
