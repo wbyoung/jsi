@@ -46,3 +46,11 @@ If they don't focus on syntax, they can probably figure out what's going on.
 `validateCardCVC` and `restrictCVC` are decent functions for them to look at.
 They probably won't understand `$.fn.payment` and what `$.fn` is or how that
 function is dispatching to `$.payment.fn`.
+
+## Date Handling
+
+They should figure out that they need to use something like
+[Globalize][globalize] or [Moment.js][moment].
+
+[globalize]: https://github.com/jquery/globalize
+[moment]: https://github.com/moment/moment/
