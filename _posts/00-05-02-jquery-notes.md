@@ -49,8 +49,11 @@ function is dispatching to `$.payment.fn`.
 
 ## Date Handling
 
+They'll have to look up docs on [creating a plugin][jquery-create-plugin].
+
 They should figure out that they need to use something like
 [Globalize][globalize] or [Moment.js][moment].
 
+[jquery-create-plugin]: http://learn.jquery.com/plugins/basic-plugin-creation/
 [globalize]: https://github.com/jquery/globalize
 [moment]: https://github.com/moment/moment/
