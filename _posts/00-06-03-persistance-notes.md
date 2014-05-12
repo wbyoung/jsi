@@ -113,6 +113,7 @@ Country.forge({ name: 'Canada' }).save().then(function(country) {
 .done(function() {
   DB.knex.client.pool.destroy();
 });
+{% endhighlight %}
 
 
 Empty collection containers can be created like so:
