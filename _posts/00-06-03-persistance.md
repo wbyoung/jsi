@@ -555,7 +555,6 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('countries', function(table) {
     table.increments('id').primary();
     table.string('name');
-    table.timestamps();
   });
 };
 
@@ -588,6 +587,45 @@ apply.
 Create another migration for the `cities` table. This should match up with the
 cities table that we created before.
 
+
+## Basic Manipulation
+
+Now we need to learn how to use Bookshelf.js to interact with the database.
+
+### Modeling
+
+We need to define the objects that we want to work with. This may seem tedious
+at this point, but we get to skip over any attributes and just define which
+model the table works with.
+
+{% highlight javascript %}
+var Bookshelf = require('bookshelf');
+var DB = Bookshelf.initialize(require('./config').database);
+
+var Country = DB.Model.extend({
+  tableName: 'countries',
+});
+{% endhighlight %}
+
+
+### Insert
+
+Now we can create and save objects via `new` or `forge`:
+
+{% highlight javascript %}
+// new Country({ name: 'Canada' }).save().... also works
+Country.forge({ name: 'Canada' }).save().then(function(country) {
+  console.log('created a country %j', country.toJSON());
+})
+.done();
+{% endhighlight %}
+
+<aside>
+**Promises**
+
+That's a lot of new stuff up in that example code there, you better ask some
+questions.
+</aside>
 
 
 [bookshelf]: http://bookshelfjs.org

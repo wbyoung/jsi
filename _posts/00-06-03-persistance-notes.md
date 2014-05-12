@@ -103,6 +103,20 @@ where people.id = 7;
 
 ## Bookshelf
 
+Node.js won't exit when using Bookshelf.js unless you close all open database
+connections:
+
+{% highlight javascript %}
+Country.forge({ name: 'Canada' }).save().then(function(country) {
+  // do something with the new country
+})
+.done(function() {
+  DB.knex.client.pool.destroy();
+});
+
+
+Empty collection containers can be created like so:
+
 {% highlight javascript %}
 var Countries = DB.Collection.extend({
   model: Country
