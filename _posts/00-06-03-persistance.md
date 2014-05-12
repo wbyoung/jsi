@@ -574,6 +574,15 @@ We can now migrate forward or backward:
 If you add `debug: true` to your `config.js` `database` setting, you can even
 see the SQL queries that Knex.js is running.
 
+<aside>
+**Migration Tracking**
+
+You'll notice a new table added to your database called `knex_migrations`. This
+table tracks the migrations you've applied thus far so it knows what's left to
+apply.
+</aside>
+
+
 ### Challenge
 
 Create another migration for the `cities` table. This should match up with the
