@@ -11,6 +11,7 @@ tagline:          'JS Immersion'
 description:      'JavaScript Immersion'
 url:              http://portlandcodeschool.github.io/jsi
 baseurl:          /jsi
+timezone:         GMT
 
 author:
   name:           'Whitney Young'
