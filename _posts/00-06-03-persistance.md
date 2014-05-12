@@ -469,6 +469,120 @@ pg.connect(settings, function(err, client, done) {
 
 
 
+## Bookshelf.js & Knex.js
+
+[Bookshelf.js][bookshelf] is an _object relational mapper_ or _ORM_. It allows
+us to work with objects in JavaScript instead of writing SQL queries manually.
+[Knex.js][knex] is the _query builder_ off of which Bookshelf.js is built. A
+query builder allows us (and Bookshelf.js) to build queries from JavaScript
+expressions that can be converted to any supported DBMS.
+
+So using these tools, we can theoretically write code that would work with any
+of the SQL databases without having to worry about differences between them. In
+practice, since the differences are subtle, and the best practice is to choose
+one database for a project, and use it for production and for the entire
+development team.
+
+<aside>
+**So I Don't Need to Know SQL?**
+
+While we'll focus on Bookshelf.js and Knex.js, you absolutely need to continue
+to develop your skills with SQL. Unlike programming languages that completely
+abstract away the lower level interaction with assembly language, ORM tools do
+not completely abstract away SQL. They just make the most common tasks more
+expressive and digestible.
+</aside>
+
+To install, we'll all three of these modules we've discussed, plus _Bluebird_,
+a _promise_ library. You'll see promises in action in just a second!
+
+{% highlight bash %}
+npm install bookshelf knex pg bluebird
+{% endhighlight %}
+
+
+### Migrations
+
+Let's specify the creation of tables and relationships directly in JavaScript.
+To do so, run:
+
+{% highlight bash %}
+./node_modules/.bin/knex migrate:make countries
+{% endhighlight %}
+
+You'll also need to create a `config.js` file that looks like this:
+
+{% highlight javascript %}
+'use strict';
+
+module.exports = {
+  database: {
+    client: 'postgres',
+    connection: {
+      host     : process.env.APP_DB_HOST     || '127.0.0.1',
+      user     : process.env.APP_DB_USER     || '',
+      password : process.env.APP_DB_PASSWORD || '',
+      database : process.env.APP_DB_NAME     || 'database'
+    }
+  }
+};
+{% endhighlight %}
+
+<aside>
+**127.0.0.1**
+
+Otherwise known as _home_ or _localhost_, this IP address is technically called
+the loopback interface. Oh, terminology.
+</aside>
+
+Once ready, we can fill out our `20140510084914_countries.js`. Yours is named
+differently? It better be. Using timestamps allows Knex.js to know what order
+to apply migrations. It also avoids the possibility of two developers creating
+a migration with the same name (which would cause merge conflicts in our
+version control system).
+
+Migrations allow us to collaborate better. Without this we would have to alter
+the database _schema_ to match the changes that another developer made. Doing
+this manually is error prone, so most communities have built automation tools
+to aid with this process.
+
+So here's a [migration][knex-schema]:
+
+{% highlight javascript %}
+'use strict';
+
+exports.up = function(knex, Promise) {
+  return knex.schema.createTable('countries', function(table) {
+    table.increments('id').primary();
+    table.string('name');
+    table.timestamps();
+  });
+};
+
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('countries');
+};
+{% endhighlight %}
+
+We can now migrate forward or backward:
+
+{% highlight bash %}
+./node_modules/.bin/knex migrate:latest
+./node_modules/.bin/knex migrate:rollback
+{% endhighlight %}
+
+If you add `debug: true` to your `config.js` `database` setting, you can even
+see the SQL queries that Knex.js is running.
+
+### Challenge
+
+Create another migration for the `cities` table. This should match up with the
+cities table that we created before.
+
+
+
 [bookshelf]: http://bookshelfjs.org
+[knex]: http://knexjs.org
+[knex-schema]: http://knexjs.org/#Schema
 [postgres]: http://www.postgresql.org
 [atwood-join]: http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
