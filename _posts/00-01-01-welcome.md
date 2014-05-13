@@ -121,7 +121,8 @@ something, speak up! Ideally, every group will have at least one question.
 - Make sure you use every variable that you defined.
 - Tell us a little more about your past. Change the values of `age` and other
   variables, then `console.log` a little more. For example,
-  `When I was 13 my hobby was lacrosse.`
+  `When I was 13 my hobby was lacrosse.` Each sentence should be printed on its
+  own line.
 - Change your code to only use one `console.log` statement. This will probably
   raise a question or two!
 
