@@ -20,6 +20,11 @@ it) that each part should be taken one at a time.
 
 TODO: Better incorporate impostor syndrome into everything somehow.
 
+TODO: JavaScript in the browser introduced some stuff like AJAX that may not
+have been the best to explore. Asking the students is both good and bad. It
+allows us to get a glimpse into their understanding, but also makes it possible
+to confuse fellow classmates. This is a necessary risk.
+
 ## Class Flow
 
 - Class starts with slides. It'd be good to break out of the slides pretty
