@@ -25,6 +25,12 @@ have been the best to explore. Asking the students is both good and bad. It
 allows us to get a glimpse into their understanding, but also makes it possible
 to confuse fellow classmates. This is a necessary risk.
 
+TODO: There was concern about where commands were allowed to be run. That is,
+people didn't understand when they were creating files and it affected the
+current directory and when it didn't. This was okay, but clarification early on
+could help. Come back to this idea and see if we can do a better job explaining
+the current working directory as well as paths.
+
 ## Class Flow
 
 - Class starts with slides. It'd be good to break out of the slides pretty
