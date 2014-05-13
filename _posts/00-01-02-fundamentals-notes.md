@@ -5,6 +5,16 @@ class: fundamentals
 date: 2014-05-13 00:00:00
 ---
 
+TODO: How do you best explain that objects are mutable?
+
+TODO: Add some more activities with objects and variables. For instance, what
+happens when you create a variable, assign it to the current property of an
+object, then change the object's property? What's the value of the variable?
+
+TODO: Common problems included not quite understanding the difference between
+a variable and what a variable was. How can we do a better job of that?
+
+
 ## Class Flow
 
 - There's no expectation to get through all the material on this one day, it

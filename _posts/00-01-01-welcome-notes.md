@@ -5,6 +5,21 @@ class: welcome
 date: 2014-05-12 00:00:00
 ---
 
+TODO: Jumping into the command line as one of the first things we did made
+some people feel uncomfortable, but others were already ready for it and had
+pretty much done all of those commands.
+
+TODO: `mkdir -p /usr/local/bin` resulted in needing to
+`sudo mkdir -p /usr/local/bin` as well as
+<code>sudo chown \`whoami\` /usr/local/bin</code>.
+
+TODO: People who are renting Macs feel a little uncomfortable on the platform.
+
+TODO: Somehow indicate during the challenge (either verbally or in the text for
+it) that each part should be taken one at a time.
+
+TODO: Better incorporate impostor syndrome into everything somehow.
+
 ## Class Flow
 
 - Class starts with slides. It'd be good to break out of the slides pretty
