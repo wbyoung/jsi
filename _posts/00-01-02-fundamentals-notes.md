@@ -14,6 +14,33 @@ object, then change the object's property? What's the value of the variable?
 TODO: Common problems included not quite understanding the difference between
 a variable and what a variable was. How can we do a better job of that?
 
+TODO: Introduction of objects can be improved. The confusion centers around the
+difference between variables and the fact that they _name_ things and the fact
+that properties name things as well. Perhaps there's a way where we can use
+props and hand them out that will help solidify the idea of what a _string_ or
+a _number_ or an _object_ are. The hard part of that will be how to associate
+those with symbols, or the variable names.
+
+TODO: Differentiating the names of variables from the names of parameters needs
+to be improved. For some people, it's been hard to understand that a function
+has its own variables. Those variables don't relate to values outside of the
+function.
+
+TODO: Reorder some of the challenges so that a few come before the return value
+stuff.
+
+TODO: Consider updating the return value example to not use the return value
+right away and instead assign it to a variable.
+
+TODO: Conditionals are only lightly introduced. Is it okay the way it is or
+should we list off the different types of checks that can be done?
+
+TODO: All challenges can be better defined at this point. Also it'd be good to
+have more challenges to select from.
+
+TODO: Add notes to this page to cover arrays by demonstrating a few different
+concepts. Accessing/altering values that are outside the length of the array,
+appending by array[array.length] = 'val'.
 
 ## Class Flow
 
