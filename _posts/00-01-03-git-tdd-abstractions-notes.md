@@ -18,7 +18,13 @@ date: 2014-05-14 00:00:00
 
 ## GitHub Example: Course Members
 
-- Have students clone and make a pull request to add their name.
+- Have students clone and make a pull request to add a markdown file with their
+  name as the file name. It can contain whatever they want in it.
+- Have them edit and make a second pull request where they actually put their
+  name and email in the file (optional to share contact info).
+- Finally, have them edit the main Readme.md file. They should add a link to
+  their file that follows with [the relative link form][github-relative]
+  `[Whitney Young](whitney.md)`. This will cause merge conflicts.
 - Start on one side of the room and accept that pull request.
 - Note that the pull request is able to be merged.
 - Move to the next student, comment on pull request that they need to update to
@@ -128,3 +134,5 @@ var each = function(array, fn) {
 each(fruits, indicateFruitThatNeedsPurchasing);
 each(fruits, indicateFruitPurchased);
 {% endhighlight %}
+
+[github-relative]: https://help.github.com/articles/relative-links-in-readmes
