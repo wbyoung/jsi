@@ -43,6 +43,20 @@ git push origin branch-name
 
 Let's practice using Git and GitHub with [this repository][github-jsi-members].
 
+### Creating your own fork
+
+Fork of the GitHub, then:
+
+{% highlight bash %}
+git push git@github.com:my_github_username/repo_name.git branch-name
+
+git remote add mine git@github.com:my_github_username/repo_name.git
+git push mine branch-name
+
+git push --set-upstream mine branch-name
+{% endhighlight %}
+
+
 ### Merging & Conflicts
 
 When collaborating, you'll sometimes end up editing the same code as someone
