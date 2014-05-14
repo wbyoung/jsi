@@ -30,6 +30,8 @@ cd repo_name
 
 git checkout -b branch-name master
 
+# do some work
+
 git status
 git diff
 
