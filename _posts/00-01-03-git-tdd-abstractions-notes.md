@@ -5,6 +5,15 @@ class: git+tdd+abstractions
 date: 2014-05-14 00:00:00
 ---
 
+TODO: Adding names worked just fine. Need a different example to cause
+conflicts.
+
+TODO: They need to know that `npm install` needs to be done from within the
+project directory.
+
+TODO: node_modules just appeared in their directory.
+
+
 ## Class Flow
 
 - Run through GitHub slides.
