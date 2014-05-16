@@ -251,7 +251,7 @@ if (1 > 2) {
 While we're at it, let's look at a few other things you can do with `if` statements.
 
 {% highlight javascript %}
-var name = "Whitney"
+var name = "Whitney";
 if (name === "Whitney") {
   console.log("Seems like a pretty cool guy, you should talk to him.");
 }
