@@ -217,10 +217,10 @@ So what if we wanted to make a weather app?
       -h, --help                      output usage information
       -V, --version                   output the version number
       -c, --celsius       show temperature in celsius
-      -f, --ferinheight   show temperature in ferinheight
+      -f, --fahrenheit   show temperature in fahrenheit
 
 So our app needs to be able to handle getting help, the version, Celsius, and
-Ferinheight. It also needs to allow a location to be specified. Let's get to
+fahrenheit. It also needs to allow a location to be specified. Let's get to
 work.
 
 {% highlight javascript %}
@@ -271,7 +271,7 @@ Here's how we could handle arguments:
 
 {% highlight javascript %}
 var celsius = false;
-var ferinheight = false;
+var fahrenheit = false;
 var location = null;
 
 each(process.argv.slice(2), function(arg) {
@@ -287,8 +287,8 @@ each(process.argv.slice(2), function(arg) {
       process.exit(0);
       break;
     case '-f':
-    case '--ferinheight':
-      ferinheight = true;
+    case '--fahrenheit':
+      fahrenheit = true;
       break;
     case '-c':
     case '--celsius':
@@ -300,8 +300,8 @@ each(process.argv.slice(2), function(arg) {
   }
 });
 
-if (!celsius && !ferinheight) {
-  ferinheight = true;
+if (!celsius && !fahrenheit) {
+  fahrenheit = true;
 }
 
 if (!location) {
@@ -309,8 +309,8 @@ if (!location) {
 }
 
 console.log('The weather in %s is hopefully sunny.', location);
-if (ferinheight) {
-  console.log('The temperature is 70 Ferinheight.');
+if (fahrenheit) {
+  console.log('The temperature is 70 fahrenheit.');
 }
 if (celsius) {
   console.log('The temperature is 21 Celsius.')
