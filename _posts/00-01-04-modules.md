@@ -360,7 +360,7 @@ license.
 mkdir my-project
 cd my-project
 git init
-echo "node_modules" > .git_ignore
+echo "node_modules" > .gitignore
 npm init
 git add .
 git ci -m 'Setting up project.'
