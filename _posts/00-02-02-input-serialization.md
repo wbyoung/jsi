@@ -39,8 +39,8 @@ Any questions?
 
 #### Quick Status Check
 
-Write a simple command line app that prompts the user for two numbers, then
-reports the sum.
+Write a simple command line app that prompts the user for one number,
+then prompts for a second, then reports the sum.
 
 
 ## Serialization
