@@ -151,8 +151,8 @@ ships, etc. Try to have fun with it!
 Here's an example of how your game might work:
 
     $ ./adventure-game game1.json
-    You are standing in a room. There are two doors.
-    One is to the north, one is to the west.
+    You are standing in a room. There are three doors.
+    One is to the north, one is to the east, one is to the west.
     Which direction do you want to go? west
 
     You are standing in a room. There are two doors.
