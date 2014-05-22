@@ -238,7 +238,7 @@ But concatenating an array of strings could look the same:
 
 {% highlight javascript %}
 var strings = ['hello', ' ', 'world'];
-var result = 0;
+var result = '';
 strings.forEach(function(s) {
   result += s;
 });
@@ -333,7 +333,7 @@ Use `reduce` to transform an array of _tuples_ into an object.
 <aside class="objective">
 {% highlight javascript %}
 var pairs = [['name', 'JSI'], ['location', { city: 'Portland', 'state': 'OR' }], ['school', 'PCS']];
-_.reduce(pairs, /* your reduce function */);
+_.reduce(pairs, /* other reduce args */);
 //=> { name: 'JSI', location: { city: 'Portland', state: 'OR' }, school: 'PCS' }
 {% endhighlight %}
 </aside>
