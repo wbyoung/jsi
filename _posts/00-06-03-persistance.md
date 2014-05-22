@@ -306,7 +306,9 @@ if we can have some consistency, that'll be a good thing. In the one-to-many
 country and city example, we said that a country _has many_ cities and that
 a city _belongs to_ a country. We then added a foreign key of `country_id` to
 each city. If a work order _has a_ receipt. Then a receipt _belongs to_ a work
-order, and we'll put a `work_order_id` column in the receipt.
+order, and we'll put a `work_order_id` column in the receipt. To ensure there's
+only one receipt per work order, the `work_order_id` should be a foreign key
+with a unique constraint.
 
 
 {% comment %} section omitted for the time being
