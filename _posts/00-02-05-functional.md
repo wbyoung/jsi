@@ -210,7 +210,7 @@ returns `true`, the value is included in the resulting array.
 
 {% highlight javascript %}
 var numbers = [1, 2, 3, 4, 5, 6];
-var even = _.filter(numbers, function(n) { return (n % 2) === 0; });
+var evenNumbers = _.filter(numbers, function(n) { return (n % 2) === 0; });
 {% endhighlight %}
 
 ### Challenge
