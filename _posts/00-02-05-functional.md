@@ -89,8 +89,11 @@ Finally, it uses objects and allows us to apply object oriented principles.
 The following is a function to get the n<sup><small>th</small></sup> Fibonacci number.
 
 {% highlight javascript %}
+/**
+ * Find the nth (zero-indexed) Fibonacci number.
+ */
 var fibonacci = function(n) {
-  return n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : n;
+  return n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : 1;
 };
 console.log(fibonacci(Number(process.argv[2])));
 {% endhighlight %}

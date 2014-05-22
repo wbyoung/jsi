@@ -82,7 +82,7 @@ var fibonacci = (function() {
   var cache = {};
   return function(n) {
     if (!cache[n]) {
-      cache[n] = n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : n;
+      cache[n] = n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : 1;
     }
     return cache[n];
   };
@@ -117,7 +117,7 @@ var memoize = function(fn) {
   };
 };
 var fibonacci = memoize(function(n) {
-  return n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : n;
+  return n > 1 ? fibonacci(n - 1) + fibonacci(n - 2) : 1;
 });
 {% endhighlight %}
 
