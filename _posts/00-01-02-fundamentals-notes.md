@@ -42,6 +42,10 @@ TODO: Add notes to this page to cover arrays by demonstrating a few different
 concepts. Accessing/altering values that are outside the length of the array,
 appending by array[array.length] = 'val'.
 
+TODO: It may be best to recommend using the bracket syntax for objects instead
+of the dot syntax. This would probably make later assignments where objects are
+used as key/value storage (hash/dictionary) much easier.
+
 ## Class Flow
 
 - There's no expectation to get through all the material on this one day, it
