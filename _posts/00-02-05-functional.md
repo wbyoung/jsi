@@ -353,7 +353,7 @@ The formal term for _zip_ is [convolution][convolution].
 There are so many more abstractions that can be built and used to our
 advantage!
 
-Choose one of the below functions from [Lo-Dash][lodash]. Learn waht it does
+Choose one of the below functions from [Lo-Dash][lodash]. Learn what it does
 well enough to explain it to the group. Come up with some examples that
 clearly and logically illustrate how it works. When would you want to use it?
 When might you avoid using it? Why?
