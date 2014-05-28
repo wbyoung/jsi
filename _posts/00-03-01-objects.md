@@ -325,7 +325,7 @@ var Person = function(firstName, lastName) {
   // we used to accept just one argument, name, so
   // be backwards compatible with that.
   if (arguments.length === 1) {
-    var names = arguments[0].split(' ', 2);
+    var names = arguments[0].split(' ');
     firstName = names[0];
     lastName = names[1];
   }
@@ -383,7 +383,7 @@ Person.prototype.name = function() {
   return this._name;
 }
 Person.prototype.setName = function(name) {
-  var names = name.split(' ', 2);
+  var names = name.split(' ');
   this._firstName = names[0];
   this._lastName = names[1];
   this._name = name;
