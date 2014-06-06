@@ -5,6 +5,10 @@ class: modules
 date: 2014-05-15 00:00:00
 ---
 
+TODO: The repository that's linked to for the `map` function is not set up at
+all. It should be set up to at least have Travis working with it, but maybe
+with JSHint as well.
+
 ## Class Flow
 
 - Run through slides
