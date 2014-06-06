@@ -629,6 +629,23 @@ That's a lot of new stuff up in that example code there, you better ask some
 questions.
 </aside>
 
+### Where
+
+### Update
+
+### Delete
+
+
+## Relationships
+
+### One-to-Many
+
+### Many-to-Many
+
+### One-to-One
+
+## Transactions
+
 
 [bookshelf]: http://bookshelfjs.org
 [knex]: http://knexjs.org
