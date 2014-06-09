@@ -123,7 +123,6 @@ article.expanded p {
   -webkit-transform: scaleY(1);
   -moz-transform: scaleY(1);
 }
-
 article.highlighted {
   background: #efe;
 }
