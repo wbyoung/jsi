@@ -5,6 +5,10 @@ class: ajax+rest
 date: 2014-06-11 00:00:00
 ---
 
+TODO: Address same origin policy to allow the first AJAX example to work with
+Chrome (and future browsers). This may require putting up a service (possibly
+on Heroku) that allows requests from any origin.
+
 ## History
 
 We'll talk about Gmail and the _Web 2.0_ revolution. This was the start of
