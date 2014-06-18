@@ -94,7 +94,7 @@ update businesses set name = 'XYZ Incorporated' where name = 'XYZ Inc.';
 We can delete objects as well by specifying which ones:
 
 {% highlight sql %}
-delete * from businesses where established < '2011-01-01';
+delete from businesses where established < '2011-01-01';
 {% endhighlight %}
 
 
@@ -212,7 +212,7 @@ relationship like we did above, but sometimes people split their time between
 multiple locations.
 
 {% highlight sql %}
-create table people (id serial primary key, name char(255));
+create table people (id serial primary key, name varchar(255));
 insert into people (name) values ('Whitney'), ('David'), ('Jonathan');
 {% endhighlight %}
 
