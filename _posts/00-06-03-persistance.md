@@ -607,7 +607,7 @@ var knex = require('knex')(knexConfig);
 var bookshelf = require('bookshelf')(knex);
 
 var Country = bookshelf.Model.extend({
-  tableName: 'countries',
+  tableName: 'countries'
 });
 {% endhighlight %}
 
