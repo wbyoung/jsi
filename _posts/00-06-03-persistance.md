@@ -601,7 +601,7 @@ at this point, but we get to skip over any attributes and just define which
 model the table works with.
 
 {% highlight javascript %}
-var env = process.NODE_ENV || 'development';
+var env = process.env.NODE_ENV || 'development';
 var knexConfig = require('./knexfile.js')[env];
 var knex = require('knex')(knexConfig);
 var bookshelf = require('bookshelf')(knex);
