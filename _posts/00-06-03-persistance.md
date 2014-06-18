@@ -509,25 +509,25 @@ Let's specify the creation of tables and relationships directly in JavaScript.
 To do so, run:
 
 {% highlight bash %}
-./node_modules/.bin/knex migrate:make countries
+./node_modules/.bin/knex init
 {% endhighlight %}
 
-You'll also need to create a `config.js` file that looks like this:
+Then modify the `knexfile.js` file that it contains:
 
 {% highlight javascript %}
-'use strict';
+client: 'postgres',
+connection: {
+  host     : process.env.APP_DB_HOST     || '127.0.0.1',
+  user     : process.env.APP_DB_USER     || '',
+  password : process.env.APP_DB_PASSWORD || '',
+  database : process.env.APP_DB_NAME     || 'jsi-bookshelf'
+}
+{% endhighlight %}
 
-module.exports = {
-  database: {
-    client: 'postgres',
-    connection: {
-      host     : process.env.APP_DB_HOST     || '127.0.0.1',
-      user     : process.env.APP_DB_USER     || '',
-      password : process.env.APP_DB_PASSWORD || '',
-      database : process.env.APP_DB_NAME     || 'database'
-    }
-  }
-};
+Finally, we can create a migration:
+
+{% highlight bash %}
+./node_modules/.bin/knex migrate:make countries
 {% endhighlight %}
 
 <aside>
@@ -572,8 +572,8 @@ We can now migrate forward or backward:
 ./node_modules/.bin/knex migrate:rollback
 {% endhighlight %}
 
-If you add `debug: true` to your `config.js` `database` setting, you can even
-see the SQL queries that Knex.js is running.
+If you add `debug: true` to your `knexfile.js` `development` setting, you can
+even see the SQL queries that Knex.js is running.
 
 <aside>
 **Migration Tracking**
@@ -601,10 +601,12 @@ at this point, but we get to skip over any attributes and just define which
 model the table works with.
 
 {% highlight javascript %}
-var Bookshelf = require('bookshelf');
-var DB = Bookshelf.initialize(require('./config').database);
+var env = process.NODE_ENV || 'development';
+var knexConfig = require('./knexfile.js')[env];
+var knex = require('knex')(knexConfig);
+var bookshelf = require('bookshelf')(knex);
 
-var Country = DB.Model.extend({
+var Country = bookshelf.Model.extend({
   tableName: 'countries',
 });
 {% endhighlight %}
@@ -622,12 +624,32 @@ Country.forge({ name: 'Canada' }).save().then(function(country) {
 .done();
 {% endhighlight %}
 
+### Queries
+
+Querying is pretty easy via:
+
+{% highlight javascript %}
+Country.where({ name: 'Canada' }).fetchAll().then(function(result) {
+  console.log(result.toJSON());
+})
+.done();
+{% endhighlight %}
+
+
 <aside>
 **Promises**
 
 That's a lot of new stuff up in that example code there, you better ask some
 questions.
 </aside>
+
+
+## Bookshelf Challenges
+
+Go explore [the documentation][bookshelf] and figure out how to create
+one-to-one and one-to-many relationships. Figure out how to create objects in
+these relationships and query for them. Also make sure you can delete and
+update objects of each type of relationship.
 
 
 [bookshelf]: http://bookshelfjs.org
