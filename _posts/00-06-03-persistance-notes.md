@@ -111,7 +111,7 @@ Country.forge({ name: 'Canada' }).save().then(function(country) {
   // do something with the new country
 })
 .done(function() {
-  DB.knex.client.pool.destroy();
+  bookshelf.knex.client.pool.destroy();
 });
 {% endhighlight %}
 
@@ -119,12 +119,12 @@ Country.forge({ name: 'Canada' }).save().then(function(country) {
 Empty collection containers can be created like so:
 
 {% highlight javascript %}
-var Countries = DB.Collection.extend({
+var Countries = bookshelf.Collection.extend({
   model: Country
 });
 var countries = new Countries(); // or Country.collection();
 
-var Cities = DB.Collection.extend({
+var Cities = bookshelf.Collection.extend({
   model: City
 });
 var cities = new Cities(); // or City.collection();
