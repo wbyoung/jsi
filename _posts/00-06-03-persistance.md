@@ -651,6 +651,34 @@ one-to-one and one-to-many relationships. Figure out how to create objects in
 these relationships and query for them. Also make sure you can delete and
 update objects of each type of relationship.
 
+### Simple Usage
+
+- Define a migration
+- Create an object
+- Read an object
+- Update an object
+- Delete an object
+- Search through objects for something specific
+
+### One-to-Many
+
+- Define two tables in a migration
+- Create an object on the _one_ end of the relationship
+- Create a few of the other type
+- Search for a model on the _one_ side based on a condition for something from
+  the _many_ side
+- Search for all models on the _many_ side that match a specific condition
+  individually and are associated with a particular instance on the _one_ side
+- Delete specific objects on the _many_ side
+- Delete all objects on the _many_ side & the object on the _one_ side within a
+  transaction
+
+### Many-to-Many
+
+- Define the required three tables in a migration
+- Create a bunch of objects that relate
+- Write queries to access them through their relationships
+
 
 [bookshelf]: http://bookshelfjs.org
 [knex]: http://knexjs.org
