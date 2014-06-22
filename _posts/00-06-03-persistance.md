@@ -94,7 +94,7 @@ update businesses set name = 'XYZ Incorporated' where name = 'XYZ Inc.';
 We can delete objects as well by specifying which ones:
 
 {% highlight sql %}
-delete * from businesses where established < '2011-01-01';
+delete from businesses where established < '2011-01-01';
 {% endhighlight %}
 
 
@@ -212,7 +212,7 @@ relationship like we did above, but sometimes people split their time between
 multiple locations.
 
 {% highlight sql %}
-create table people (id serial primary key, name char(255));
+create table people (id serial primary key, name varchar(255));
 insert into people (name) values ('Whitney'), ('David'), ('Jonathan');
 {% endhighlight %}
 
@@ -509,25 +509,25 @@ Let's specify the creation of tables and relationships directly in JavaScript.
 To do so, run:
 
 {% highlight bash %}
-./node_modules/.bin/knex migrate:make countries
+./node_modules/.bin/knex init
 {% endhighlight %}
 
-You'll also need to create a `config.js` file that looks like this:
+Then modify the `knexfile.js` file that it contains:
 
 {% highlight javascript %}
-'use strict';
+client: 'postgres',
+connection: {
+  host     : process.env.APP_DB_HOST     || '127.0.0.1',
+  user     : process.env.APP_DB_USER     || '',
+  password : process.env.APP_DB_PASSWORD || '',
+  database : process.env.APP_DB_NAME     || 'jsi-bookshelf'
+}
+{% endhighlight %}
 
-module.exports = {
-  database: {
-    client: 'postgres',
-    connection: {
-      host     : process.env.APP_DB_HOST     || '127.0.0.1',
-      user     : process.env.APP_DB_USER     || '',
-      password : process.env.APP_DB_PASSWORD || '',
-      database : process.env.APP_DB_NAME     || 'database'
-    }
-  }
-};
+Finally, we can create a migration:
+
+{% highlight bash %}
+./node_modules/.bin/knex migrate:make countries
 {% endhighlight %}
 
 <aside>
@@ -572,8 +572,8 @@ We can now migrate forward or backward:
 ./node_modules/.bin/knex migrate:rollback
 {% endhighlight %}
 
-If you add `debug: true` to your `config.js` `database` setting, you can even
-see the SQL queries that Knex.js is running.
+If you add `debug: true` to your `knexfile.js` `development` setting, you can
+even see the SQL queries that Knex.js is running.
 
 <aside>
 **Migration Tracking**
@@ -601,11 +601,13 @@ at this point, but we get to skip over any attributes and just define which
 model the table works with.
 
 {% highlight javascript %}
-var Bookshelf = require('bookshelf');
-var DB = Bookshelf.initialize(require('./config').database);
+var env = process.env.NODE_ENV || 'development';
+var knexConfig = require('./knexfile.js')[env];
+var knex = require('knex')(knexConfig);
+var bookshelf = require('bookshelf')(knex);
 
-var Country = DB.Model.extend({
-  tableName: 'countries',
+var Country = bookshelf.Model.extend({
+  tableName: 'countries'
 });
 {% endhighlight %}
 
@@ -621,6 +623,18 @@ Country.forge({ name: 'Canada' }).save().then(function(country) {
 })
 .done();
 {% endhighlight %}
+
+### Queries
+
+Querying is pretty easy via:
+
+{% highlight javascript %}
+Country.where({ name: 'Canada' }).fetchAll().then(function(result) {
+  console.log(result.toJSON());
+})
+.done();
+{% endhighlight %}
+
 
 <aside>
 **Promises**
@@ -645,6 +659,42 @@ questions.
 ### One-to-One
 
 ## Transactions
+
+
+## Bookshelf Challenges
+
+Go explore [the documentation][bookshelf] and figure out how to create
+one-to-one and one-to-many relationships. Figure out how to create objects in
+these relationships and query for them. Also make sure you can delete and
+update objects of each type of relationship.
+
+### Simple Usage
+
+- Define a migration
+- Create an object
+- Read an object
+- Update an object
+- Delete an object
+- Search through objects for something specific
+
+### One-to-Many
+
+- Define two tables in a migration
+- Create an object on the _one_ end of the relationship
+- Create a few of the other type
+- Search for a model on the _one_ side based on a condition for something from
+  the _many_ side
+- Search for all models on the _many_ side that match a specific condition
+  individually and are associated with a particular instance on the _one_ side
+- Delete specific objects on the _many_ side
+- Delete all objects on the _many_ side & the object on the _one_ side within a
+  transaction
+
+### Many-to-Many
+
+- Define the required three tables in a migration
+- Create a bunch of objects that relate
+- Write queries to access them through their relationships
 
 
 [bookshelf]: http://bookshelfjs.org

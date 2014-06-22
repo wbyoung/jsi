@@ -150,11 +150,11 @@ JavaScript:
 function Fruit() {}
 
 function Apple() {}
-Apple.prototype = Object.create(Vehicle.prototype);
+Apple.prototype = Object.create(Fruit.prototype);
 Apple.prototype.constructor = Apple;
 
 function Banana() {}
-Banana.prototype = Object.create(Vehicle.prototype);
+Banana.prototype = Object.create(Fruit.prototype);
 Banana.prototype.constructor = Banana;
 {% endhighlight %}
 

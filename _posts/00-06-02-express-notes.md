@@ -26,6 +26,28 @@ point. Expect confusion.
 The discussion should lead us to realizing that there's not much to gain when
 testing an Express app by splitting up the routing and the handlers.
 
+{% highlight javascript %}
+app.param(function(name, fn){
+  if (fn instanceof RegExp) {
+    return function(req, res, next, val) {
+      var captures;
+      if (captures = fn.exec(String(val))) {
+        req.params[name] = captures[1] || captures[0];
+        next();
+      } else {
+        res.send(404);
+      }
+    }
+  }
+});
+
+app.param('id', /^\d+$/);
+
+// or
+
+app.route(/^\/api\/people\/(\d+)$/)
+{% endhighlight %}
+
 
 ## New Library or Concept Discovery
 
