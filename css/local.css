@@ -248,3 +248,17 @@ form.auth button:active {
   background-image:none;
   box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
+
+img[alt="MVC"] {
+  float: right;
+  display: block;
+  max-width: 250px;
+  margin-left: 2em;
+}
+
+@media (max-width: 38rem) {
+  img[alt="MVC"] {
+    float: none;
+    margin: 0px auto;
+  }
+}
