@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ember App</title>
+</head>
+<body>
+<script type="text/x-handlebars" data-template-name="application">
+<h1>Hi</h1>
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'favorites'}}Favorites{{/link-to}}
+
+{{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="about">
+<h2>{{title}}</h2>
+</script>
+
+<script type="text/x-handlebars" data-template-name="favorites">
+<h2>Favorites</h2>
+{{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="favorites/index">
+<ul>
+{{#each}}
+  <li>{{#link-to 'favorites.view' id}}{{name}}{{/link-to}}</li>
+{{/each}}
+</ul>
+</script>
+
+<script type="text/x-handlebars" data-template-name="favorites/view">
+<p>{{name}}</p>
+{{input type="text" value=name placeholder="Favorite Thing"}}
+{{#link-to 'favorites.index'}}Back{{/link-to}}
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
+<script type="text/javascript" src="http://builds.emberjs.com/tags/v1.5.1/ember.js"></script>
+<script type="text/javascript">
+
+var App = Em.Application.create({
+  LOG_TRANSITIONS: true
+});
+
+var favorites = [
+  { id: 1, name: 'Dogs' },
+  { id: 2, name: 'Ice Cream' },
+  { id: 3, name: 'Sunshine' }
+];
+
+App.Router.map(function() {
+  this.route('about');
+  this.resource('favorites', function() {
+    this.route('view', { path: '/:id' });
+  });
+});
+
+App.AboutRoute = Em.Route.extend({
+  model: function() {
+    return {
+      title: 'About Me'
+    }
+  }
+});
+
+App.FavoritesIndexRoute = Em.Route.extend({
+  model: function() {
+    return favorites;
+  }
+});
+
+App.FavoritesViewRoute = Em.Route.extend({
+  model: function(params) {
+    return favorites.filter(function(favorite) {
+      return favorite.id === +params.id;
+    })[0];
+  }
+});
+
+</script>
+</body>
+</html>
