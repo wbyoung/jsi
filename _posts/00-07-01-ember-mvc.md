@@ -62,14 +62,24 @@ Ember has the following, and only _models_ means the same as typical MVC:
 - Components
 - Views
 
+
 ## One Big Challenge
 
 Over the next week and a half, your challenge is to learn Ember.
 
-No one should work alone at this. Here are some things to consider:
+No one should work alone at this.
+
+Before getting started, let's discuss a bit about the learning experiences
+we've been through so far:
 
 - Discuss methodologies that have worked well from the previous materials we've
   covered.
+- Discuss methodologies that have not worked well in learning new concepts.
+- When did you learn the fastest?
+- When did you learn the slowest?
+
+As you begin to tackle this large task, here are a few suggestions:
+
 - Create a roadmap, plan, and goals.
 - Ensure that everyone in your group is on the same page before moving on to
   the next step.
@@ -82,7 +92,7 @@ No one should work alone at this. Here are some things to consider:
 
 
 We will have regular breaks each day to discuss what we've been trying and what
-their next steps will be. During this time, you should share what you've
+their next steps will be. During this time, you should present what you've
 learned, what's currently challenging you, and what you're next goals are.
 
 
