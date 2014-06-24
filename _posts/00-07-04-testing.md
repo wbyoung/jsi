@@ -9,10 +9,10 @@ It's time to learn more Ember!
 
 If you haven't already started looking into testing, take a look today.
 
-Testing with Mocha, Chai, and Karma will require a bit of setup. Ask and you
-shall receive (the appropriate resources aren't yet up on the Internet). Also,
-the unit test helpers won't work with Mocah, but there's another way you can
-isolate pieces of an application for testing.
+Testing with Mocha, Chai, and Karma will require a bit of setup. Fortunately,
+you can set this up very easily with [Caribou][caribou]. Also, the unit test
+helpers won't work with Mocah, but there's another way you can isolate pieces
+of an application for testing.
 
 Make sure you can answer the following questions:
 
@@ -26,3 +26,5 @@ You should be able to:
 
 If your group is a little ahead of schedule, let's discuss how you might
 structure testing an application where the front end is using a back-end API.
+
+[caribou]: https://github.com/wbyoung/caribou
