@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ember App</title>
+</head>
+<body>
+<script type="text/x-handlebars" data-template-name="application">
+<ul class="example-gravatar">
+  <li>{{gravatar-image email="tomster@emberjs.com" size="200"}}</li>
+  <li>{{gravatar-image size="200"}}</li>
+</ul>
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/gravatar-image">
+<img {{bind-attr src=gravatarUrl}}>
+<div class="email-input">
+  {{input type="email" value=email placeholder="Enter your Gravatar e-mail"}}
+</div>
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
+<script type="text/javascript" src="http://builds.emberjs.com/tags/v1.5.1/ember.js"></script>
+<script type="text/javascript" src="https://gist.githubusercontent.com/alexmuller/1178226/raw/24d190e4d4f918a3221e39e82e3fba46ef8313c1/hex_md5.js"></script>
+<script type="text/javascript">
+
+var App = Em.Application.create({
+  LOG_TRANSITIONS: true
+});
+
+App.GravatarImageComponent = Ember.Component.extend({
+  size: 200,
+  email: '',
+
+  gravatarUrl: function() {
+    var email = this.get('email'),
+        size = this.get('size');
+
+    return 'http://www.gravatar.com/avatar/' + hex_md5(email) + '?s=' + size;
+  }.property('email', 'size')
+});
+
+</script>
+</body>
+</html>
