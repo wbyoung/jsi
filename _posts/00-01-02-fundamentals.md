@@ -5,8 +5,6 @@ class: fundamentals
 date: 2014-05-13 00:00:00
 ---
 
-Example from discussion with everyone.
-
 This class will cover some of the fundamentals of JavaScript. We will discuss
 conditionals, objects, arrays and functions. We'll also make a lot of mistakes
 so we can learn that it's not quite so bad.
