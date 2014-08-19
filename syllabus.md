@@ -71,12 +71,12 @@ The core abilities for students in our program are as follows. They are designed
 
 ### Technical abilities
 
-Technical abilities are skills needed to succeed in web development
+Technical abilities are skills needed to succeed in web development.
 
 
 ### Career abilities
 
-Career abilities are skills needed to have a successful freelance career
+Career abilities are skills needed to have a successful freelance career.
 
 
 # Educational Expectations
@@ -115,7 +115,7 @@ Portland Code School highly recommends MacBook Pros or Airs running OSX 10.9 or 
 
 ### Other Tools
 
-You are required to learn and use **Sublime Text**. (http://www.sublimetext.com) The "stable" version is v2, but Whitney has been using v3 for a long time and it's fine. (http://www.sublimetext.com/3)  Sublime Text is not free. You can try it for free and that will get you through this class, but you should consider buying a copy when you get a job.
+You are required to learn and use **Sublime Text** (http://www.sublimetext.com). The "stable" version is v2, but Whitney has been using v3 (http://www.sublimetext.com/3) for a long time and it's recommended. Sublime Text is not free. You can try it for free and that will get you through this class, but you should consider buying a copy when you get a job.
 
 Now, you may already have a favorite text editor. I understand where you're coming from. However, one characteristic of professional programmers is they can walk into a shop and quickly adopt whatever tool set that company is using. Lots of programmers use Sublime Text and, if all the students in this class use it, we can learn from each other and get the most out of the tool.
 
