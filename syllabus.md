@@ -125,7 +125,7 @@ There is no better way to learn coding then to do it, to fail, and to puzzle out
 
 You need to provide your own computer running Mac OS X 10.9 for this class.
 
-Portland Code School highly recommends MacBook Pros or Airs running OSX 10.9 or later. Most of the best coding tools are developed on that operating system first. The important aspect of OSX is the underlying UNIX-like operating system. We place an emphasis at being able to work on a Unix/Linux command line level, down in the guts of the operating system as well as the entire group learning the same set of tools.
+Portland Code School highly recommends MacBook Pros or MacBook Airs running OSX 10.9 or later. Most of the best coding tools are developed on that operating system first. The important aspect of OSX is the underlying UNIX-like operating system. We place an emphasis at being able to work on a Unix/Linux command line level, down in the guts of the operating system as well as the entire group learning the same set of tools.
 
 ### Other Tools
 
