@@ -46,7 +46,7 @@ This class continues your education in software development. You should be able 
   - Create one a web site with HTML and CSS
   - Use the Git version control tool from the command line
   - Explain the difference between front end and back end development
-  - Basic understanding of variables
+  - Define a variable in one programming language (JavaScript or any other language)
 
 If you have questions about these prerequisites, contact your instructor.
 
