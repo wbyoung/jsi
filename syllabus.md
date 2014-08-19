@@ -172,7 +172,7 @@ Your progress will be assessed using a variety of methods:
 * Participation in the community - we will ask you to hang out with your peers, meet people, and report back
 * Projects - we will help you design and build a portfolio web site where you can show off projects you work on
 
-We will keep records of your progress. Your records are private to you and your instructor. However, at the end of the session, employers ask us for recommendations -- the names of particularly talented and hard-working students. We use student scores and evaluations to identify students for these recommendations.
+We will keep records of your progress. Your records are private to you and your instructor. However, at the end of the session, employers ask us for recommendations &mdash; the names of particularly talented and hard-working students. We use student scores and evaluations to identify students for these recommendations.
 
 We will check-in 1-on-1 with you every two weeks. You will get early notice if you need to step up your game in any particular area. After that, if in our judgment we think you still aren't able to complete the demands of the course and become a viable developer, we will discuss alternatives with you that may include termination of your contract with Portland Code School. For your part, if you feel you are not getting your money's worth, you can terminate your contract at any time. Check your student contract for details.
 
