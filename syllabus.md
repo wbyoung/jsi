@@ -73,10 +73,24 @@ The core abilities for students in our program are as follows. They are designed
 
 Technical abilities are skills needed to succeed in web development.
 
+1. Understanding the core principles of programming in JavaScript
+1. Creating full-stack websites encompassing both front-end and back-end technologies
+1. Using test driven development and understanding its benefits
+1. Understanding various modules like Express and Ember.js
+1. Building applications following design patterns such as Model View Controller
+1. Collaborating with development teams using GitHub
+
 
 ### Career abilities
 
 Career abilities are skills needed to have a successful freelance career.
+
+1. Understanding time management and effective teamwork to complete projects on time
+1. Learning to read and work in another code base
+1. Understanding how to succeed in the job market
+1. Creating & cultivating peer and professional networks
+1. Developing life-long learning strategies - identifying information sources, reading code, developing mentoring relationships
+1. Communicating your skills - portfolio development, presenting your work, making business connections, interviewing
 
 
 # Educational Expectations
