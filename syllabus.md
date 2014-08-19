@@ -237,19 +237,58 @@ Details will be provided as the class proceeds.
 
 ## Course Overview
 
-We will cover material on four major themes: Career, Code, Process & Tools
-
-
-### Career
+We will cover material on three major themes: Code, Communication, and Career.
 
 
 ### Code
 
+* JavaScript
+  * Node.js
+  * Express.js
+  * Ember.js
+  * Debugging
+  * jQuery
+  * JSON
+  * Object Oriented Design
+* Web
+  * AJAX
+  * HTML
+  * CSS & Sass
+* Databases
+  * Postgresql
+  * ORM
+* Version Control
+  * Git
+  * GitHub
+* Test Driven Development
+* Tools
+  * Heroku
+  * Gulp
 
-###  Process
+
+### Communication
+
+* Code Quality
+* Brainstorming
+* Teamwork
+  * Solving problems as a team
+  * Pair programming
+  * Breaking down large projects
+  * Effectively working on individual components
+* Working in others' code bases
 
 
-### Tools
+### Career
+
+* Joining the community
+  * Developer culture
+  * Local developer resources
+  * Online communities
+* Collaborating within teams
+* Understanding different types of work and their roles
+* Time management
+* Learning while working
+* Interviewing
 
 
 ### Instructional ADA statement
