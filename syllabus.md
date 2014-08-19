@@ -83,7 +83,7 @@ Technical abilities are skills needed to succeed in web development.
 
 ### Career abilities
 
-Career abilities are skills needed to have a successful freelance career.
+Career abilities are skills needed to have a successful development career.
 
 1. Understanding time management and effective teamwork to complete projects on time
 1. Learning to read and work in another code base
@@ -133,7 +133,7 @@ You are required to learn and use **Sublime Text** (http://www.sublimetext.com).
 
 Now, you may already have a favorite text editor. I understand where you're coming from. However, one characteristic of professional programmers is they can walk into a shop and quickly adopt whatever tool set that company is using. Lots of programmers use Sublime Text and, if all the students in this class use it, we can learn from each other and get the most out of the tool.
 
-**Git** is a distributed version control system. It is complicated, arcane, and difficult to learn. Yet, it is one of the most commonly used and essential to any freelancer. We will start using git in the first week and emphasize its use throughout. You will be required to be able to use git from the command line, but we will also explore graphical user interfaces to make your use of git more transparent and powerful.
+**Git** is a distributed version control system. It is complicated, arcane, and difficult to learn. Yet, it is one of the most commonly used and essential to any developer. We will start using git in the first week and emphasize its use throughout. You will be required to be able to use git from the command line, but we will also explore graphical user interfaces to make your use of git more transparent and powerful.
 
 There will be more tools introduced as the class goes on, but these are good places to start.
 
