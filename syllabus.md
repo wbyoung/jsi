@@ -102,7 +102,7 @@ Class hours: **Monday-Friday 9am - 5pm**
 
 You must attend all classes. Class begins promptly at 9am. Late arrivals and missing team members are very disruptive. If you are going to miss class or even be as little as 10 minutes late, please email Whitney prior to 9am.
 
-This course requires 40 hours each week for classroom time. In addition, successful students devote approximately 10-20 outside hours of their own time each week. In effect, think of this as a the on-boarding process for a full time job where 40 hours each week are required, but you still need to put in a little extra if you want to get your money's worth.
+This course requires 40 hours each week for classroom time. In addition, successful students devote approximately 10-20 outside hours of their own time each week. In effect, think of this as a demanding full time job where 40 hours each week are required, but you still need to put in a little extra if you want to impress your boss and get a raise.
 
 
 ### Goal setting and deadlines
