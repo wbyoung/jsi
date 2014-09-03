@@ -2,7 +2,7 @@
 layout: notes
 title: Fundamentals Notes
 class: fundamentals
-date: 2014-09-03 00:00:00
+date: 2014-09-03 01:00:00
 ---
 
 TODO: How do you best explain that objects are mutable?
