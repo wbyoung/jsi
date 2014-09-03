@@ -2,7 +2,7 @@
 layout: notes
 title: Ember Testing Notes
 class: testing
-date: 2014-06-26 00:00:00
+date: 2014-10-16 00:00:00
 ---
 
 Originally, I thought that this day would focus mostly on testing the front-end

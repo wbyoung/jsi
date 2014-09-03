@@ -2,7 +2,7 @@
 layout: notes
 title: Persistence Notes
 class: persistence
-date: 2014-06-18 00:00:00
+date: 2014-10-08 00:00:00
 ---
 
 ## Class Flow

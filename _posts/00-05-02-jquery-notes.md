@@ -2,7 +2,7 @@
 layout: notes
 title: jQuery Notes
 class: jquery
-date: 2014-06-10 00:00:00
+date: 2014-09-30 00:00:00
 ---
 
 We're continuing ideas of learning how to learn in this class. Students will be

@@ -2,7 +2,7 @@
 layout: notes
 title: Git, TDD &amp; Abstractions Notes
 class: git+tdd+abstractions
-date: 2014-05-14 00:00:00
+date: 2014-09-04 00:00:00
 ---
 
 TODO: Adding names worked just fine. Need a different example to cause

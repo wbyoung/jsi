@@ -2,7 +2,7 @@
 layout: notes
 title: Modules Notes
 class: modules
-date: 2014-05-15 00:00:00
+date: 2014-09-05 00:00:00
 ---
 
 TODO: The repository that's linked to for the `map` function is not set up at

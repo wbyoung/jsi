@@ -2,7 +2,7 @@
 layout: notes
 title: User Input & Serialization Notes
 class: serialization
-date: 2014-05-20 00:00:00
+date: 2014-09-10 00:00:00
 ---
 
 ## Class Flow

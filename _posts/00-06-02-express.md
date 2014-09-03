@@ -2,7 +2,7 @@
 layout: post
 title: Express
 class: express
-date: 2014-06-17 00:00:00
+date: 2014-10-07 00:00:00
 ---
 
 ## DRY: Don't Repeat Yourself

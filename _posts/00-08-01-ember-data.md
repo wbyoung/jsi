@@ -2,7 +2,7 @@
 layout: post
 title: Ember Data
 class: ember-data
-date: 2014-06-30 00:00:00
+date: 2014-10-20 00:00:00
 ---
 
 It's time to learn more Ember!

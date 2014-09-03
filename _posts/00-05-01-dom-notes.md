@@ -2,7 +2,7 @@
 layout: notes
 title: Front End Notes
 class: dom
-date: 2014-06-09 00:00:00
+date: 2014-09-29 00:00:00
 ---
 
 At this point, we're starting to dump documentation on the students instead of

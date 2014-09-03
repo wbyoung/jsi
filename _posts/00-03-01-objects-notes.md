@@ -2,7 +2,7 @@
 layout: notes
 title: Object Oriented Design Notes
 class: oo
-date: 2014-05-27 00:00:00
+date: 2014-09-16 00:00:00
 ---
 
 ## Alternative Approach

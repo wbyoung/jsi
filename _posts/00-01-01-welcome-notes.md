@@ -2,7 +2,7 @@
 layout: notes
 title: Welcome Notes
 class: welcome
-date: 2014-05-12 00:00:00
+date: 2014-09-03 00:00:00
 ---
 
 TODO: Jumping into the command line as one of the first things we did made

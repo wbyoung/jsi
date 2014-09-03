@@ -2,7 +2,7 @@
 layout: notes
 title: Regular Expressions Notes
 class: regex
-date: 2014-06-05 00:00:00
+date: 2014-09-26 00:00:00
 ---
 
 We've reached a turning point in the class here.

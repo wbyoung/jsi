@@ -2,7 +2,7 @@
 layout: post
 title: Modules
 class: modules
-date: 2014-05-15 00:00:00
+date: 2014-09-05 00:00:00
 ---
 
 In this class we'll continue to discuss abstractions. We'll create some common

@@ -2,7 +2,7 @@
 layout: notes
 title: Node.js Notes
 class: learnyounode
-date: 2014-06-16 00:00:00
+date: 2014-10-06 00:00:00
 ---
 
 ## Class Flow

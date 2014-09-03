@@ -2,7 +2,7 @@
 layout: post
 title: Node.js
 class: learnyounode
-date: 2014-06-16 00:00:00
+date: 2014-10-06 00:00:00
 ---
 
 Today we're going to start learning Node.js. There's a great interactive

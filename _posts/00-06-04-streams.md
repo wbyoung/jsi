@@ -2,7 +2,7 @@
 layout: post
 title: Streams
 class: streams
-date: 2014-06-19 00:00:00
+date: 2014-10-09 00:00:00
 ---
 
 We've briefly touched on streams already during the `learnyounode` tutorial.

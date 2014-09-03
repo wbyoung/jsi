@@ -1,7 +1,7 @@
 ---
 layout: notes
 title: Graduation Notes
-date: 2014-08-01 00:00:00
+date: 2014-11-21 00:00:00
 ---
 
 ## List Student Projects

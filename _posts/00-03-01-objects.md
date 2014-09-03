@@ -2,7 +2,7 @@
 layout: post
 title: Making Objects
 class: oo
-date: 2014-05-27 00:00:00
+date: 2014-09-16 00:00:00
 ---
 
 It's been a long time coming. We're ready to discuss objects in detail! Many

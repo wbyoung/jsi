@@ -2,7 +2,7 @@
 layout: notes
 title: Bind, Call &amp; Apply Notes
 class: bind+call+apply
-date: 2014-05-28 00:00:00
+date: 2014-09-17 00:00:00
 ---
 
 This class may not feel appropriate at this time. You'll have to gauge how well

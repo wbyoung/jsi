@@ -2,7 +2,7 @@
 layout: notes
 title: Fixing Issues
 class: issues
-date: 2014-05-21 00:00:00
+date: 2014-09-11 00:00:00
 ---
 
 ## Class Flow

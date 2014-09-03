@@ -2,7 +2,7 @@
 layout: notes
 title: Closures &amp; Scope Notes
 class: closures+scope
-date: 2014-05-22 00:00:00
+date: 2014-09-12 00:00:00
 ---
 
 ## Class Flow

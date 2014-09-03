@@ -2,7 +2,7 @@
 layout: notes
 title: AJAX &amp; REST Notes
 class: ajax+rest
-date: 2014-06-11 00:00:00
+date: 2014-10-01 00:00:00
 ---
 
 TODO: Address same origin policy to allow the first AJAX example to work with

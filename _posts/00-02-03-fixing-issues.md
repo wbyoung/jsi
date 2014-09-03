@@ -2,7 +2,7 @@
 layout: post
 title: Fixing Issues
 class: issues
-date: 2014-05-21 00:00:00
+date: 2014-09-11 00:00:00
 ---
 
 As you may have noticed, the JSI Game Library has some

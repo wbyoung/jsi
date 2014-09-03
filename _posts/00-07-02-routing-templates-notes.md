@@ -2,7 +2,7 @@
 layout: notes
 title: Routing &amp; Templates Notes
 class: routing+templates
-date: 2014-06-24 00:00:00
+date: 2014-10-14 00:00:00
 ---
 
 A basic use of routing and templates with routes nested in resources and a

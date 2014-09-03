@@ -2,7 +2,7 @@
 layout: notes
 title: Ember &amp; MVC Notes
 class: ember+mvc
-date: 2014-06-23 00:00:00
+date: 2014-10-13 00:00:00
 ---
 
 It's important to make sure that everyone understands that they'll never

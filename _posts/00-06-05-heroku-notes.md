@@ -2,7 +2,7 @@
 layout: notes
 title: Heroku Notes
 class: heroku
-date: 2014-06-20 00:00:00
+date: 2014-10-10 00:00:00
 ---
 
 TODO: Add information about `newrelic-node`.

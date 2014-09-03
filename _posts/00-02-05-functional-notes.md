@@ -2,7 +2,7 @@
 layout: notes
 title: Functional Programming Notes
 class: functional
-date: 2014-05-23 00:00:00
+date: 2014-09-15 00:00:00
 ---
 
 ## Class Flow

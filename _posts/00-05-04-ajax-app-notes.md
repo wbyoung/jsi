@@ -2,7 +2,7 @@
 layout: notes
 title: AJAX Application Notes
 class: ajax-app
-date: 2014-06-12 00:00:00
+date: 2014-10-02 00:00:00
 ---
 
 I have an implementation of this app.

@@ -2,7 +2,7 @@
 layout: post
 title: Mini Project
 class: mini-project
-date: 2014-06-02 00:00:00
+date: 2014-09-23 00:00:00
 ---
 
 Over the following week, we're going to create a portfolio site that you can
