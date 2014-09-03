@@ -123,8 +123,8 @@ something, speak up! Ideally, every group will have at least one question.
   variables, then `console.log` a little more. For example,
   `When I was 13 my hobby was lacrosse.` Each sentence should be printed on its
   own line.
-- Change your code to only use one `console.log` statement. This will probably
-  raise a question or two!
+- Change your code to only use one `console.log` statement, but still print on
+  multiple lines. This will probably raise a question or two!
 
 
 ## Reference
