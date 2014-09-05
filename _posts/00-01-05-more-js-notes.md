@@ -76,6 +76,18 @@ with a few more problems, here are some ideas:
   - [Adriann on GitHub][adriann]
   - [Python Challenge][python-challenge] and [solutions][python-challenge-solutions]
 
+# Week 1 Quiz
+
+1. Define an object representing a city that has the following properties:
+   - `country`
+   - `name`
+   - `numberOfPeople`
+1. Define that same object using an alternative syntax.
+1. Write a function that adds two numbers and returns the result.
+1. Write a function, `fullName` that takes a person object and returns their full name. Assume that the person object has the properties `firstName` and `lastName`.
+1. Create an array of songs (like a playlist). Each song should have an
+`artist`, `album`, and `title`.
+
 [calpoly]: http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html
 [adriann]: http://adriann.github.io/programming_problems.html
 [python-challenge]: http://www.pythonchallenge.com
