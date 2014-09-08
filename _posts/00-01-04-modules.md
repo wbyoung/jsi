@@ -132,7 +132,7 @@ An example:
  * @function
  * @param {array} array - Input array
  * @param {function} fn - Mapping function
- * @returns {function} A new array
+ * @returns {array} A new array
  * @example
  *
  * // create an array of squares
