@@ -297,3 +297,15 @@ readFile(process.argv[2], { encoding: 'utf8' })
   console.log(contents);
 });
 {% endhighlight %}
+
+
+# Week 2 Quiz
+
+- Create a new repository on GitHub
+- Use TDD to write the following functions in a module:
+  * A `fullName` function that takes a person object with the properties
+    `firstName` and `lastName` and returns their full name.
+  * A function that takes an array of people and returns an array of their
+    full names.
+- Explain what the purpose of callbacks are and one case where they are used
+  in JavaScript.
